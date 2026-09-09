@@ -1,8 +1,11 @@
-# [Slides](../Notebooks/Applied_Descriptive_Statistics.ipynb)
+## Applied Descriptive Statistics
 
-# Learning Objectives
-- Learn what is mean, median and mode and why there are important
-- Learn what is range, variance, percentile
+### Learning Objectives
+By the end of this lesson, students will be able to:
+1. Implement mean, median, and mode from scratch (no library shortcuts)
+2. Implement range and standard deviation from scratch
+3. Compute percentiles and interpret what a given percentile means
+4. Apply all of the above to the Titanic fare data
 
 ## An Introduction to Descriptive Statistics
 
@@ -208,3 +211,29 @@ def compute_standard_deviation(dataset):
 
 compute_standard_deviation(data)
 ```
+
+### Topics
+- Mean, median, mode from scratch
+- Range and standard deviation from scratch
+- Percentiles
+
+### Resources
+- Complete the [companion notebook](../Notebooks/Applied_Descriptive_Statistics.ipynb)
+
+### Challenges
+
+Deliverable: a notebook with all 5 functions from this lesson completed (no `return` stubs left), each verified against the equivalent `numpy`/`scipy` function on the same `data` array, plus the 3 Titanic fare questions below.
+
+1. Finish `compute_mean`, `compute_median`, `compute_mode`, `compute_range`, `compute_standard_deviation`
+2. For each function, add a line comparing your result to `np.mean`/`np.median`/`stats.mode`/etc. on the same data to confirm they agree
+3. Using `Notebooks/titanic.csv`:
+   - What percentage of passengers paid less than the mean fare?
+   - What percentage of passengers paid less than the median fare?
+   - At what fare amount did 75% of passengers pay less than? (75th percentile)
+
+### Rubric
+| Criteria | Meets expectations |
+|---|---|
+| From-scratch functions | All 5 implemented without calling `np.mean`/`np.median`/etc. inside them |
+| Verification | Each function's output matches the library equivalent |
+| Titanic application | All 3 fare questions answered correctly |

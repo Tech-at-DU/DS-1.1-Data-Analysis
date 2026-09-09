@@ -1,37 +1,49 @@
 ## Repository Setup Instructions
 
-The course's *source* repository (located at `https://github.com/Product-College-Courses/DS-1.1-Data-Analysis`) contains course materials including the schedule, class topics, challenges, starter code, unit tests, slides, and links to resources.
-It will be continuously updated throughout the course, so you will need to regularly *pull* from it to get new materials.
-(Note that you cannot *push* to the course's source repository.)
-However, you can *fork* it to create a copy and push code to your own fork.
+This repo contains all course materials — lessons, notebooks, datasets, and challenges. It's self-contained: no external accounts or slide decks required.
 
-**Important:**
-Please follow these instructions *exactly* to correctly set up your fork of this repository. If you skip a step or do them out of order, it may not work.
+### 1. Fork and clone
 
-1. Fork the course's source repo on GitHub to create your own copy of it on your GitHub account, which should also be named `DS-1.1-Data-Analysis`
+Fork this repo on GitHub, then clone your fork:
 
-1. Visit your fork on GitHub and clone *that* repo onto your local computer:
-`git clone https://github.com/<your-username>/DS-1.1-Data-Analysis.git`
+```
+git clone https://github.com/<your-username>/DS-1.1-Data-Analysis.git
+cd DS-1.1-Data-Analysis
+```
 
-1. Push once to link your local repo to your *remote* forked GitHub repo with:
-`git push -u origin master`
+### 2. Set up your environment
 
-1. Each time you've completed a challenge, you should *commit* your work. When you want to share code for review, *push* it to your remote GitHub repo with:
-`git push` (the `-u` in the previous command lets you omit `origin master`)
+```
+conda env create -f binder/environment.yml
+conda activate ds-1.1-data-analysis
+```
 
-1. Add this course's source repo as another *remote* to your local repo with:
-`git remote add course https://github.com/Product-College-Courses/DS-1.1-Data-Analysis.git`
+This installs everything used across every lesson in this course — pandas, numpy, scipy, statsmodels, matplotlib, seaborn, plotly, scikit-learn, duckdb, and requests.
 
-1. When you want to access new course materials, first be sure you've committed and pushed your recent work (run `git status` to check) and then *pull* from the course's source repo with:
-`git pull course master`
+### 3. Work through a lesson
 
-1. To earn credit towards your streak for commits to this repo, you'll need to create another repo on GitHub named `Data-Analysis` (no `DS-1.1-` prefix) and **do not** initialize it with a ReadMe.
+1. Read the lesson in [`Lessons/`](Lessons/)
+2. Open its companion notebook in [`Notebooks/`](Notebooks/) and complete the **Challenges** section from the lesson
+3. Commit your work as you go:
 
-1. Add that new GitHub repo as another URL to the `origin` remote on your local repo with:
-`git remote set-url --add origin https://github.com/<your-username>/Data-Analysis.git`
+```
+git add Notebooks/<the-notebook-you-edited>.ipynb
+git commit -m "Complete <lesson name> challenges"
+```
 
-1. Verify that the `origin` remote has two distinct URLs with `(push)` after them with:
-`git remote -v`
+### 4. Share your work
 
-1. Now, after each time you complete a challenge and *commit* your work, you can *push* it to both remote GitHub repos with one simple command:
-`git push`
+If you want feedback or to submit your work, push to your fork and open a pull request against the upstream repo, or share the notebook/PR link directly with whoever's reviewing your work.
+
+```
+git push origin master
+```
+
+### 5. Pulling in course updates
+
+If the upstream course repo gets updated, add it as a second remote and pull from it:
+
+```
+git remote add upstream https://github.com/<course-org>/DS-1.1-Data-Analysis.git
+git pull upstream master
+```

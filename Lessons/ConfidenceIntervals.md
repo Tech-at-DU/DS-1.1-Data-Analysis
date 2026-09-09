@@ -34,7 +34,7 @@ import pandas as pd
 import numpy as np
 import scipy.stats
 
-df = pd.read_csv('Iris.csv')
+df = pd.read_csv('Datasets/Iris.csv')
 
 x = df[df['Species'] == 'Iris-setosa']['SepalLengthCm'].tolist()
 
@@ -69,7 +69,7 @@ import numpy as np
 
 def find_remove_outlier(data_sample):
     # calculate summary statistics
-    data_mean, data_std = np.mean(data), np.std(data)
+    data_mean, data_std = np.mean(data_sample), np.std(data_sample)
     # define cut-off
     cut_off = data_std * 3
     lower, upper = data_mean - cut_off, data_mean + cut_off
@@ -106,7 +106,7 @@ def find_remove_outlier_iqr(data_sample):
     outliers = [x for x in data_sample if x < lower or x > upper]
     # remove outliers
     outliers_removed = [x for x in data_sample if x > lower and x < upper]
-    return outliers
+    return outliers, outliers_removed
 
 y = np.array([-5, 11, 14])
 x =  np.concatenate((scipy.stats.norm.rvs(loc=5 , scale=1 , size=100), y))
@@ -115,7 +115,7 @@ print(find_remove_outlier_iqr(x))
 print(scipy.stats.iqr(x))
 ```
 
-## How we can visually see the outlier?¶
+## How we can visually see the outlier?
 Box plot use the IQR method to display data and outliers
 ```Python
 import matplotlib.pyplot as plt
@@ -125,5 +125,25 @@ plt.boxplot(x)
 plt.show()
 ```
 
+## Topics
+- Confidence intervals: Z-based and T-based
+- Outlier detection: 3-standard-deviation method (normal data) and IQR method (any distribution)
+- Visualizing outliers with a box plot
+
 ## Resources
 - Read this assignment from CS department of Utah [Estimation and Confidence Intervals](https://www.cs.utah.edu/~jeffp/teaching/cs3130/homeworks/hw7.pdf)
+
+## Challenges
+
+Deliverable: a notebook with a 95% confidence interval for a second species, an outlier check on the Titanic `Fare` column using both methods, and a box plot.
+
+1. Repeat the confidence interval activity above for **Iris-versicolor** instead of Iris-setosa — compute both `ci_z` and `ci_t`, and state in a markdown cell whether the two intervals differ much and why (hint: think about what each method assumes about σ)
+2. Using `Notebooks/titanic.csv`, run `find_remove_outlier` (3-std-dev method) and `find_remove_outlier_iqr` (IQR method) on the `Fare` column. State how many outliers each method finds and why the counts differ (hint: `Fare` is right-skewed, so the two methods disagree)
+3. Produce a box plot of `Fare` and visually confirm it matches the IQR outliers your function found
+
+## Rubric
+| Criteria | Meets expectations |
+|---|---|
+| Confidence interval | Both `ci_z` and `ci_t` computed correctly for Iris-versicolor, with a stated comparison |
+| Outlier detection | Both methods run correctly on `Fare`, outlier counts compared and explained |
+| Visualization | Box plot matches the outliers reported by the IQR method |

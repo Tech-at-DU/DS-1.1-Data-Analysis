@@ -1,8 +1,10 @@
-# [Slides](../Notebooks/Pandas_Merge_Concatenate.ipynb)
+## How to Combine DataFrames
 
-## Learning Objectives
-- How to combine different data-frame
-- Learn how to reshape a data-frame
+### Learning Objectives
+By the end of this lesson, students will be able to:
+1. Merge two DataFrames with `pd.merge()` using left/right/inner/outer joins
+2. Concatenate DataFrames row-wise and column-wise with `pd.concat()`
+3. Reshape a DataFrame from wide to long format with `pd.melt()`
 
 ## Combine Dataset in Pandas
 
@@ -65,11 +67,11 @@ pd.merge(adf, cdf, how='left')
 ## When two data-frames have exactly the same columns
 
 ```Python
-
 df = pd.DataFrame([[1, 2], [3, 4]], columns = ['a','b'])
 df2 = pd.DataFrame([[5, 6], [7, 8]], columns = ['a','b'])
 
-df = df.append(df2, ignore_index=True)
+# DataFrame.append() was removed in pandas 2.0 — use pd.concat instead
+df = pd.concat([df, df2], ignore_index=True)
 ```
 
 ### Slicing data-frame based on largest value for an specific column
@@ -104,10 +106,33 @@ melted = pd.melt(df, id_vars=["weekday"],
 melted                         
 ```
 
-### More Exercise
+### Topics
+- `pd.merge()`: left, right, inner, outer joins
+- `pd.concat()`: row-wise and column-wise
+- `pd.melt()`: wide-to-long reshaping
 
-- https://martin-thoma.com/pandas-merge-join-concatenate/
+### Resources
+- [Pandas Merge, Join, and Concatenate](https://martin-thoma.com/pandas-merge-join-concatenate/)
+- [Pandas melt tutorial notebook](https://github.com/codebasics/py/blob/master/pandas/11_melt/pandas_melt_tutorial.ipynb)
+- [Reshape Pandas Data with Melt](https://deparkes.co.uk/2016/10/28/reshape-pandas-data-with-melt/)
+- Complete the [companion notebook](../Notebooks/Pandas_Merge_Concatenate.ipynb)
 
-- https://github.com/codebasics/py/blob/master/pandas/11_melt/pandas_melt_tutorial.ipynb
+### Challenges
 
-- https://deparkes.co.uk/2016/10/28/reshape-pandas-data-with-melt/
+Deliverable: a notebook with the two DataFrames below, all 4 join types performed and their row counts compared, plus one melt exercise.
+
+```python
+students = pd.DataFrame({'student_id': [1, 2, 3, 4], 'name': ['Ana', 'Ben', 'Cy', 'Deb']})
+grades = pd.DataFrame({'student_id': [1, 2, 2, 5], 'course': ['Math', 'Math', 'Art', 'Art'], 'grade': ['A', 'B', 'A', 'C']})
+```
+
+1. Perform a left, right, inner, and outer join of `students` and `grades` on `student_id`. For each, state in a markdown cell why the row count differs (which student/grade rows appear or vanish, and why)
+2. Concatenate two copies of `students` row-wise with `pd.concat`, using `ignore_index=True` so indices don't collide
+3. Using the `weekday`/`Person 1-3` melt example from this lesson, melt it and then answer: which person had the highest single-day score, and on which day?
+
+### Rubric
+| Criteria | Meets expectations |
+|---|---|
+| Joins | All 4 join types performed correctly with correct resulting row counts |
+| Explanation | Row-count differences explained correctly for each join type |
+| Melt | Melted DataFrame correctly answers the highest-score question |

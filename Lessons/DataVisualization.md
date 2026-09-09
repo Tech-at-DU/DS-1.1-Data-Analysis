@@ -1,26 +1,57 @@
+## Data Manipulation & Visualization
 
-## Data Manipulation & Visualization [(Slides)](https://docs.google.com/presentation/d/1msr4k8kCOrGjx3Jmzq0Ml7VE2PXZffuuxHcm4-yBxx0/edit?usp=sharing)
+### Learning Objectives
+By the end of this lesson, students will be able to:
+1. Choose the right chart type for a given question (scatterplot, bar/histogram, pie)
+2. Build charts with seaborn/matplotlib on a real dataset
+3. Distinguish continuous vs. categorical data, and descriptive vs. predictive analytics
+4. Slice, index, and filter a pandas DataFrame to answer a specific question
+
+### Choosing a Chart
+
+The right chart depends on the question, not personal taste:
+
+- **Scatterplot** — relationship between two continuous variables (does age correlate with fare paid?).
+- **Bar graph / histogram** — distribution or comparison of a single variable across categories or bins (how many passengers per class? what's the age distribution?).
+- **Pie chart** — share of a whole across a *small* number of categories. Use sparingly — bar charts are almost always easier to read accurately than pie charts once you have more than 3-4 slices.
+
+### Data Literacy
+
+- **Continuous vs. discrete/categorical data** — continuous data (age, fare) can take any value in a range and supports averaging; categorical data (sex, embarked port) is a fixed set of labels and needs counts/proportions instead of means.
+- **Descriptive vs. predictive analytics** — descriptive analytics summarizes what already happened in the data ("62% of first-class passengers survived"); predictive analytics uses that data to estimate what will happen for new/unseen cases (a model estimating survival odds for a new passenger). This course builds descriptive skills first because predictive work (see [Intro to Machine Learning](../README.md)) depends on it.
+
+### Common Data-Handling Problems
+- Missing values silently skewing an average or a chart
+- Wrong dtype (a numeric column read in as text) breaking sort order or math
+- Filtering with the wrong boolean logic and getting no rows — or all of them
 
 ### Topics
-- Review of the Data Science Process
-- Building Visualizations with Seaborn
-- Basic Data Visualization
-  - Scatterplots, Bar Graphs/Histograms, and Pie Charts
-- Review of Basic Data Analysis
-  - Common Problems with Data Handling
-  - Slicing, Indexing, and Filtering a Pandas DataFrame
-  - Intro to Data Types and Structures
-- Basic Data Literacy
-  - Continuous vs. Discrete/Categorical Data
-  - Descriptive vs. Predictive Data Analytics
-- Cycling through the Data Science Process
+- Building visualizations with seaborn: scatterplots, bar graphs/histograms, pie charts
+- Slicing, indexing, and filtering a pandas DataFrame
+- Continuous vs. categorical data
+- Descriptive vs. predictive analytics
+- The data science process, revisited with a real dataset
 
 ### Resources
-- Read this Huffington Post [article on the importance of data visualization](https://www.huffingtonpost.com/phil-simon/the-increasing-importance_b_9837722.html) and its effect on modern-way decision making
-- Read this Forbes [article on data literacy](https://www.forbes.com/sites/homaycotte/2014/10/28/data-literacy-what-it-is-and-why-none-of-us-have-it/#6ff4b02168bb) and why it's needed in the professional world
+- [pandas: 10 minutes to pandas](https://pandas.pydata.org/docs/user_guide/10min.html)
+- [seaborn: example gallery](https://seaborn.pydata.org/examples/index.html) — browse for chart-type inspiration
 
 ### Challenges
-- Complete [this online guide/tutorial in Pandas tools](https://pandas.pydata.org/pandas-docs/stable/10min.html) if you haven't already
-- Complete [this notebook](../Notebooks/DataVisualization.ipynb) on basic data visualization with Seaborn on the _Titanic_ data
-- Write and answer at least 3-5 descriptive analysis questions using basic data slicing/indexing
-- Create 3-5 descriptive visualizations (scatterplots, histograms, pie charts) for the Titanic dataset
+
+Deliverable: a notebook with 4 written questions, the pandas code that answers each using slicing/indexing, and one chart per question (4 charts total, at least one of each type: scatterplot, bar/histogram, pie).
+
+1. Complete [this notebook](../Notebooks/DataVisualization.ipynb) on basic data visualization with seaborn on the _Titanic_ data
+2. Write 4 descriptive analysis questions about the Titanic dataset. Answer each with pandas (slicing/indexing) and then chart it:
+   - 1 question suited to a **scatterplot** (relationship between two continuous variables)
+   - 1 question suited to a **bar graph or histogram** (distribution or comparison across categories/bins)
+   - 1 question suited to a **pie chart** (share of a whole, few categories)
+   - 1 question where you choose the chart type — justify the choice in a markdown cell
+3. Every chart needs a title and axis labels
+
+### Rubric
+| Criteria | Meets expectations |
+|---|---|
+| Questions | 4 clear, answerable questions about the Titanic data |
+| Chart-type fit | Each chart type matches the kind of question it's answering |
+| Chart quality | Titles, axis labels, and legible output on all 4 charts |
+| Justification | Written explanation for the free-choice chart in question 4 |

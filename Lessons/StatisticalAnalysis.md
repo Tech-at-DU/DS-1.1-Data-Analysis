@@ -1,15 +1,14 @@
-# Statistical Analysis
+## Statistical Analysis: GMM, KDE, and Correlation
 
-## Learning Objectives (Competencies) (5 min)
+### Learning Objectives
 By the end of this lesson, students will be able to:
-1. Describe what is histogram
-2. Describe how can fit mixture of Gaussian to fit the data distribution
-3. Learn what is correlation and visualize the correlation among features
+1. Describe what a histogram is and what it approximates
+2. Fit a Gaussian Mixture Model (GMM) and a Kernel Density Estimate (KDE) to a data sample
+3. Compute and visualize correlation between features, both via `df.corr()` and from scratch (Pearson formula)
 
+## What is a histogram?
 
-## What is histogram? (10 min)
-
-Histogram is one method for estimating density. We explore our own function to the existed ones
+A histogram is one method for estimating a density (see also [Applied Probability to DataFrame](AppliedProbabilitytodataframe.md)). This lesson introduces two model-based alternatives — GMM and KDE — that approximate the underlying probability density function instead of just binning and counting.
 
 
 ## Statistical Analysis
@@ -102,11 +101,12 @@ plt.show()
 http://scikit-learn.org/stable/auto_examples/neighbors/plot_digits_kde_sampling.html
 
 ## Correlation
-Correlation is used to test relationships between quantitative variables
-Some examples of data that have a high correlation:
-1- Your caloric intake and your weight
-2- The amount of time your study and your GPA
-Question what is negative correlation?
+Correlation is used to test relationships between quantitative variables. Some examples of data that have a high correlation:
+1- Your caloric intake and your weight (positive — more calories, more weight)
+2- The amount of time you study and your GPA (positive — more study time, higher GPA)
+
+**Negative correlation** means the two variables move in opposite directions — as one goes up, the other tends to go down (e.g. hours spent on social media vs. hours of sleep).
+
 Correlations are useful because we can find out what relationship variables have, we can make predictions about future behavior.
 
 ## Activity: Obtain the correlation among all features of iris dataset
@@ -114,7 +114,7 @@ Correlations are useful because we can find out what relationship variables have
 2- Eliminate two columns ['Id', 'Species']
 3- Compute the correlation among all features.
 Hint: Use `df.corr()`
-4- Plot the correlation by heatmap and corr plot in Seaborn -> `sns.heatmap`, `sns.corrplot`
+4- Plot the correlation as a heatmap in Seaborn -> `sns.heatmap`
 5- Write a function that computes the correlation (Pearson formula)
 Hint: https://en.wikipedia.org/wiki/Pearson_correlation_coefficient
 6- Compare your answer with `scipy.stats.pearsonr` for any given two features
@@ -124,9 +124,8 @@ import pandas as pd
 import numpy as np
 import scipy.stats
 import seaborn as sns
-import scipy.stats
 
-df = pd.read_csv('Iris.csv')
+df = pd.read_csv('Datasets/Iris.csv')
 df = df.drop(columns=['Id', 'Species'])
 sns.heatmap(df.corr(), annot=True)
 
@@ -143,5 +142,30 @@ print(pearson_corr(df['SepalLengthCm'], df['PetalLengthCm']))
 print(scipy.stats.pearsonr(df['SepalLengthCm'], df['PetalLengthCm']))
 ```
 
+## Topics
+- Gaussian Mixture Models (GMM)
+- Kernel Density Estimation (KDE)
+- Correlation: `df.corr()`, heatmaps, Pearson correlation from scratch
+
 ## Resources
-- Read this blog [KDE ](https://jakevdp.github.io/blog/2013/12/01/kernel-density-estimation/)
+- [Gaussian Mixture Model (Brilliant.org)](https://brilliant.org/wiki/gaussian-mixture-model/)
+- Read this blog [KDE](https://jakevdp.github.io/blog/2013/12/01/kernel-density-estimation/)
+- [scikit-learn: KDE for generating handwritten digits](http://scikit-learn.org/stable/auto_examples/neighbors/plot_digits_kde_sampling.html)
+- [Pearson correlation coefficient (Wikipedia)](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)
+
+## Challenges
+
+Deliverable: a notebook completing the GMM, KDE, and correlation activities above, plus the extension below.
+
+1. Complete the GMM activity: fit a 2-component GMM to the generated `x` sample, print its means/covariances/weights, and generate new samples from it
+2. Complete the KDE activity: fit and plot a KDE on the same `x` sample
+3. Complete the correlation activity: heatmap of `df.corr()` on the Iris dataset, plus your own `pearson_corr()` function verified against `scipy.stats.pearsonr`
+4. Extension: using the Titanic dataset, compute the correlation between `Fare` and `Survived`, and between `Pclass` and `Survived`. Which relationship is stronger, and does the sign (positive/negative) make sense given what `Pclass` measures?
+
+## Rubric
+| Criteria | Meets expectations |
+|---|---|
+| GMM | Correct number of components fit, parameters printed, new samples generated |
+| KDE | KDE curve plotted and visually matches the histogram shape |
+| Correlation | `pearson_corr()` matches `scipy.stats.pearsonr` to several decimal places |
+| Extension | Titanic correlations computed correctly, with a correct explanation of sign/strength |

@@ -6,17 +6,18 @@ This project empowers you to use a new and possibly never-before-seen dataset to
 
 ### Instructions:
 
-1. Copy the link to the raw dataset [here](https://raw.githubusercontent.com/Make-School-Courses/DS-1.1-Data-Analysis/master/Homework/HW2/data/cardio_train.csv)
-2. Create a copy of [this](https://colab.research.google.com/drive/1RduyfteMuVXm45jLXsmOMpNkm0N_zYEh?usp=sharing) notebook, and follow the comments and instructions in it
-3. Submit your copy of the notebook on Gradescope
+1. Open [`starter.ipynb`](starter.ipynb) — it loads `data/cardio_train.csv` and scaffolds the 5 sections below
+2. Work through each section, following the prompts in the notebook
+3. Commit and push your completed notebook
 
 ### References
 
-All of the materials you need to complete the steps are in your lessons. Some good references:
+All of the materials you need to complete the steps are in the lessons. Some good references:
 
-- Class 4: Applied Descriptive Statistics
-- Class 6: PDFs, CDFs, and Normal Distributions
-- Classes 7 & 8: Hypothesis Testing & Acceptable Error
+- [Applied Descriptive Statistics](../../Lessons/AppliedDescriptiveStatistics.md)
+- [Applied Probability on DataFrames](../../Lessons/AppliedProbabilitytodataframe.md) (PDFs, CDFs)
+- [Normal Distribution, CLT and Z-Scores](../../Lessons/NormalDistribution.md)
+- [Hypothesis Testing & Acceptable Error](../../Lessons/HypothesisTesting.md)
 
 
 ### Evaluation

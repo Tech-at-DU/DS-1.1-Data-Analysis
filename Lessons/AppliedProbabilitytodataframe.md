@@ -1,18 +1,10 @@
-# [Slides](../Notebooks/Applied_Probability.ipynb)
+## Applied Probability on DataFrames
 
-# Learning Objectives
-
-- what is probability and conditional probability and how they applied to data-frame?
-
-- Activities for conditional probability over titanic
-
-- Activities for Conditional probability for Tennis dataset
-
-- what is Histogram, density, pdf and cdf. Apply these to Age column in Titanic dataset
-
-- Normal Distribution, Z-Distribution
-
-- Math for pdf and cdf
+### Learning Objectives
+By the end of this lesson, students will be able to:
+1. Apply probability and conditional probability directly to a pandas DataFrame
+2. Compute a histogram, PDF, and CDF for a numeric column and read probabilities off them
+3. Explain the empirical (68-95-99.7) rule for the normal distribution and verify it with `scipy.stats`
 
 ## A Brief Introduction to Probabilistic Thinking
 
@@ -102,20 +94,13 @@ And asked the following:
 
 - Makes sense when you think about it!
 
-## Activity (Titanic):
+## Worked Example (Titanic)
 
 - Given that some passengers paid over $100 for their ticket, what is the chance they survived?
     - Try, two approaches: P(survived = 1 | Fare > 100) directly
     - Another way: Use Bayesian -> P(survived = 1 and Fare > 100)/ P(Fare > 100)
-- Given that a passenger is under 30 but over 20 years old, what are the chances they are in first class?
-- Given that a female passenger was unmarried, what are the chances that she survived?
 
-- Given that a male passenger over 30 years did not survive, what are the odds that he paid less than $25 for a ticket?
-
-- What is the probability that a survived passenger was man?
-
-# Answer for the first Question
-- From conditional Probability Rule:
+### Answer
 
 P(survived = 1 | Fare > 100) = P(survived = 1 and Fare > 100)/ P(Fare > 100)
 
@@ -125,14 +110,14 @@ len(df[(df['Survived'] == 1) &  (df['Fare'] >= 100)])/len(df[df['Fare'] >= 100])
 df[df['Fare'] >= 100]['Survived'].value_counts()
 ```
 
-# Answer for the last Question
+A second worked example — **what is the probability that a survived passenger was male?** (P(Sex = 'male' | Survived = 1)):
 
-- P(passenger = 'man' | Survived = '1')
 ```Python
 df[df['Survived'] == 1]['Sex'].value_counts()
 109 / (233 + 109)
 ```
-# Conditional Probability for Tennis dataset
+
+## Conditional Probability for Tennis dataset
 
 ```Python
 import pandas as pd
@@ -154,7 +139,9 @@ print(conditional_prob('d', 'e', 'Weak'))
 print(conditional_prob('d', 'e', 'Strong'))
 ```
 
-## What is histogram, write a pseudo-code for it?
+## Histogram, PDF, and CDF
+
+A **histogram** counts how many values fall into each of a set of bins — it's the empirical (observed) shape of a distribution. A **PDF** (probability density function) is the smoothed, theoretical curve a histogram approximates — `sns.histplot(..., kde=True)` overlays one on top of the other. A **CDF** (cumulative distribution function) answers "what fraction of values are at or below X?" — it's the running total of the histogram, read left to right.
 
 ## Important Notes:
 
@@ -171,18 +158,19 @@ print(conditional_prob('d', 'e', 'Strong'))
 - Also when the pdf and its parameters be given, we can arbitrarily generate samples that follows that density
 
 
-# PDF and CDF
+## PDF and CDF on the Titanic `Age` column
 ```python
 import seaborn as sns
-sns.distplot(df['Age'].dropna(), hist=True, kde=True, bins=20)
-sns.distplot(df['Age'].dropna(), hist_kws=dict(cumulative=True), kde_kws=dict(cumulative=True))
-chance_less_than_40 = len(df[df['Age'] <= 40])/len(ls_age)
-cdf_age = df['Age'].value_counts().sort_index().cumsum()/len(df['Fare'])
+
+# sns.distplot was removed in seaborn 0.14 — use histplot (with kde=True for a smoothed curve)
+sns.histplot(df['Age'].dropna(), kde=True, bins=20)
+
+chance_less_than_40 = len(df[df['Age'] <= 40]) / len(df['Age'].dropna())
+cdf_age = df['Age'].value_counts().sort_index().cumsum() / len(df['Age'].dropna())
 cdf_age.plot()
 ```
 
-# How to calculate probability that a passenger was between 20 and 40?
-
+**Question:** using `cdf_age` above, what's the probability a passenger's age was between 20 and 40? (Hint: `P(20 <= Age <= 40) = P(Age <= 40) - P(Age < 20)` — read both values off the CDF.)
 
 # Normal Distribution
 
@@ -217,11 +205,7 @@ This allows us to make inferences regarding the data's distribution, including b
 
 ## The shape and characteristics of Normal Distribution
 
-- As you can see, we see different degrees of data captured within bounds that are created by the standard deviation.
-
-<br><img src="http://www.oswego.edu/~srp/stats/images/normal_34.gif" /><br>
-
-So to make it clear:
+Different amounts of data fall within each band of standard deviation from the mean — this is the **empirical rule**:
 - 68% of the data is captured within one standard deviation from the mean.
 - 95% of the data is captured within two standard deviations from the mean.
 - 99.7% of the data is captured within three standard deviations from the mean.
@@ -261,3 +245,31 @@ from scipy.stats import norm
 
 norm.sf(70, loc=60, scale=10)
 ```
+
+### Topics
+- Probability and conditional probability on a DataFrame
+- Histogram, PDF, CDF
+- The empirical (68-95-99.7) rule
+- `scipy.stats.norm`: `cdf`, `sf`
+
+### Resources
+- Complete the [companion notebook](../Notebooks/Applied_Probability.ipynb)
+
+### Challenges
+
+Deliverable: a notebook answering all 5 Titanic questions below plus the tennis-dataset question, each with working pandas code and a stated numeric answer.
+
+1. Given that a passenger is under 30 but over 20 years old, what are the chances they are in first class?
+2. Given that a female passenger was unmarried (`Name` doesn't contain "Mrs"), what are the chances that she survived?
+3. Given that a male passenger over 30 years did not survive, what are the odds he paid less than $25 for a ticket?
+4. Using `cdf_age`, what's the probability a passenger's age was between 20 and 40?
+5. A class's final exam scores are normally distributed with mean 60 and standard deviation 10. What's the probability a student scored above 70? Verify your `scipy.stats.norm` answer against a histogram of 100,000 simulated scores.
+6. Using `Notebooks/Datasets/tennis.txt` and the `conditional_prob()` function from this lesson, what's the probability of playing tennis (`Decision`) given `Wind == 'Weak'` vs. `Wind == 'Strong'`? Which wind condition is more favorable to playing?
+
+### Rubric
+| Criteria | Meets expectations |
+|---|---|
+| Titanic questions | Questions 1-3 answered with correct conditional probability code |
+| CDF question | Question 4 correctly reads two CDF values and subtracts them |
+| Normal distribution | Question 5's `scipy.stats` answer matches the simulated histogram's proportion |
+| Tennis dataset | Question 6 correctly compares the two conditional probabilities |

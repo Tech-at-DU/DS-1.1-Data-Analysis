@@ -126,15 +126,25 @@ $\beta$ = P(accepting $H_o$ $|$ $H_o$ is false)
 The drug has effect on brain
 The drug has no effect on brain
 
-## Other examples for statistical test
-- Please read the Unpaired t-test part of this article
-http://iaingallagher.tumblr.com/post/50980987285/t-tests-in-python
-
-## Homework
-https://docs.google.com/document/d/1ITryiXU_VoyBvtZY4deehk4PmlieSlF7rSNc8sBU3Sw/edit
-
 ## Resources
-- [Slide Animation of T-test vs Z-test](https://docs.google.com/presentation/d/1BQibGlrpX71JU0jBU0C7zJJr6S_4WQeFzO7PBmnxf8g/edit?usp=sharing)
--  Read this blog from iaingallagher [Z and T test in Python](http://iaingallagher.tumblr.com/post/50980987285/t-tests-in-python)
+- Read this blog from iaingallagher [Z and T test in Python](http://iaingallagher.tumblr.com/post/50980987285/t-tests-in-python) — including the Unpaired t-test section
 - Read Jeff Groff's [article on null hypothesis on Kaggle](https://www.kaggle.com/jgroff/unit-3-hypothesis-testing)
 - More numerical examples on [Hypothesis Testing with the Z score](http://jukebox.esc13.net/untdeveloper/RM/Stats_Module_4/mobile_pages/Stats_Module_48.html)
+
+## Challenges
+
+Deliverable: a notebook containing the 3 functions from this lesson (`accept_or_reject_null_hypothesis`, the t-test activity, `z_t_null_hypothesis`), the rat and British-men worked examples run to completion, written answers to the reading-reflection questions, and one applied hypothesis test on `Datasets/student_scores.csv`.
+
+1. **Build the functions** — complete the z-test, t-test, and z-or-t-test activities above and run them on the given rat/British-men examples
+2. **Reading reflection** — after reading the two articles above, answer in markdown cells:
+   - In your own words, what's the difference between a Z-test and a T-test, and which one applies when you don't know the population standard deviation?
+   - The Kaggle article discusses a real null-hypothesis example. Summarize it in 2-3 sentences and state what the null and alternative hypotheses were.
+   - Give one example from your own experience (school, work, a claim you've seen in the news) where you could apply a hypothesis test
+3. **Apply it** — using `Datasets/student_scores.csv`, test the claim "the average test score is 65" against the actual sample of scores. State your null and alternative hypotheses, choose z-test or t-test (and justify the choice), compute the p-value, and state your conclusion at α = 0.05
+
+### Rubric
+| Criteria | Meets expectations |
+|---|---|
+| Functions | All 3 functions implemented and correctly accept/reject on the worked examples |
+| Reflection | All 3 reading-reflection questions answered in the student's own words |
+| Applied test | Correct test chosen and justified, correct conclusion at α = 0.05 |

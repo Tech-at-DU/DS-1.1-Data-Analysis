@@ -1,8 +1,10 @@
-# [Slides](../Notebooks/Pandas_Titanic.ipynb)
+## Data Manipulation & Visualization: Titanic Walkthrough
 
-## Learning Objectives
-- Learn all of the methods in pandas for data-frame manipulation
-- Apply visualization to data-frame
+### Learning Objectives
+By the end of this lesson, students will be able to:
+1. Combine pandas manipulation (filtering, grouping, crosstabs) with visualization in one workflow
+2. Use `.groupby()` and `pd.crosstab()` to compare categories
+3. Choose between a histogram, bar chart, box plot, and heatmap for a given comparison
 
 ### Titanic Dataset Description
 
@@ -93,9 +95,7 @@ df['Embarked'].value_counts().plot(kind='bar')
 ```
 ### Count the different 'Embarked' values the data-frame has and plot horizontally
 ```Python
-df['Embarked'].value_counts().plot('barh').invert_yaxis()
-
-# Check df['Embarked'].value_counts().plot('barh')
+df['Embarked'].value_counts().plot(kind='barh').invert_yaxis()
 ```
 ### Another way to do the count and plot it
 
@@ -175,3 +175,27 @@ pd.crosstab(df['Sex'], df['Embarked'])
 ```Python
 sns.heatmap(pd.crosstab(df['Sex'], df['Embarked'], normalize='index'), cmap="YlGnBu", annot=True)
 ```
+
+### Topics
+- Combining filtering, `.groupby()`, and `pd.crosstab()` with visualization
+- Choosing a chart for a categorical comparison: histogram, bar, box, heatmap
+
+### Resources
+- [pandas: Group by: split-apply-combine](https://pandas.pydata.org/docs/user_guide/groupby.html)
+- [pandas: `crosstab`](https://pandas.pydata.org/docs/reference/api/pandas.crosstab.html)
+- Complete the [companion notebook](../Notebooks/Pandas_Titanic.ipynb)
+
+### Challenges
+
+Deliverable: a notebook repeating the same style of analysis as this lesson, but for passengers who embarked at **Southampton ('S')** instead of Cherbourg, plus 2 questions of your own.
+
+1. Repeat the age-histogram, average-age-by-sex, and oldest-passenger-by-sex analysis above for `Embarked == 'S'`
+2. Build a crosstab of `Sex` vs. `Pclass` for `Embarked == 'S'` passengers and visualize it as a heatmap
+3. Write and answer 2 of your own questions using `.groupby()` or `pd.crosstab()` on any column combination not already covered above
+
+### Rubric
+| Criteria | Meets expectations |
+|---|---|
+| Southampton analysis | All 3 repeated analyses correct for `Embarked == 'S'` |
+| Crosstab + heatmap | Heatmap correctly reflects the crosstab values |
+| Own questions | 2 original questions, each using `.groupby()` or `pd.crosstab()` |

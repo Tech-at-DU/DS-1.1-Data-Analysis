@@ -1,10 +1,13 @@
-# [Slides](../Notebooks/Pandas_Intro.ipynb)
+## Simple Data Manipulation with Pandas
 
-## Learning Objectives
-- How to create pandas data-frame
-- How do data manipulation with Pandas
+### Learning Objectives
+By the end of this lesson, students will be able to:
+1. Create a pandas DataFrame from a Python dictionary
+2. Select rows/columns with `.loc`, `.iloc`, and boolean filtering
+3. Apply functions across a DataFrame with `.apply()`
+4. Sort, aggregate, and pivot a DataFrame
 
-### Lets create a simple data-frame in Pandas
+### Let's create a simple DataFrame in Pandas
 
 - If we pass a Python dictionary as the `data` to the Pandas DataFrame input argument, we can create a Pandas DataFrame
 
@@ -149,3 +152,42 @@ table = OrderedDict((
 d = DataFrame(table)
 p = d.pivot(index='Item', columns='CType', values='USD')
 ```
+
+### Topics
+- Creating a DataFrame from a dictionary
+- Selecting rows/columns: `.loc`, `.iloc`, boolean filtering
+- Aggregating with `.mean()`, `.sum()`, `.apply()`
+- Sorting and pivoting
+
+### Resources
+- [pandas: Indexing and selecting data](https://pandas.pydata.org/docs/user_guide/indexing.html)
+- Complete the [companion notebook](../Notebooks/Pandas_Intro.ipynb)
+
+### Challenges
+
+Deliverable: a notebook building the `people` DataFrame below and answering all 6 questions using the operations demonstrated above (no writing raw loops).
+
+```python
+people = pd.DataFrame({
+    'name': ['john', 'mary', 'peter', 'jeff', 'bill', 'lisa'],
+    'age': [23, 78, 22, 19, 45, 33],
+    'state': ['iowa', 'dc', 'california', 'texas', 'washington', 'dc'],
+    'num_children': [2, 2, 0, 1, 2, 1],
+    'num_pets': [0, 4, 0, 5, 0, 0],
+})
+```
+
+1. Who is older than 30?
+2. Who has more pets than children?
+3. What's the average age, and the average number of pets?
+4. Sort the DataFrame by age, descending
+5. Which rows have a name starting with a vowel?
+6. Add a new column `pet_to_child_ratio` = `num_pets / (num_children + 1)` (the `+1` avoids dividing by zero)
+
+### Rubric
+| Criteria | Meets expectations |
+|---|---|
+| Selection | Questions 1, 2, 5 use `.loc`/boolean filtering, not manual loops |
+| Aggregation | Question 3 uses `.mean()` |
+| Sorting | Question 4 uses `.sort_values()` |
+| New column | Question 6's column computed with vectorized pandas operations |
