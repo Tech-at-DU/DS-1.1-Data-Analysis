@@ -1,5 +1,7 @@
 ## Introduction to Data Science
 
+> **New to this course?** Complete [Setup.md](../Setup.md) first — fork, clone, and set up your environment — before opening any notebook. Everything here assumes you're working inside your own cloned copy of the repo.
+
 ### Learning Objectives
 By the end of this lesson, students will be able to:
 1. Define data science, data analysis, and exploratory data analysis (EDA)

@@ -1,5 +1,7 @@
 # DS 1.1 Data Analysis & Visualization
 
+> **Before you start:** follow [Setup.md](Setup.md) to fork, clone, and set up your environment first. Lessons and notebooks assume you're working inside your own cloned copy of this repo — skipping setup is the most common way to hit broken paths and missing images later.
+
 ## Course Description
 
 In this course, students learn the foundational skills of data analysis, including data collection, cleaning, statistical analysis, and visualization with modern tools and libraries. Students gain a strong grounding in statistical concepts, learn to query data with SQL, pull data from real-world APIs, and use AI coding assistants effectively — then use all of it to build a simple machine learning pipeline.

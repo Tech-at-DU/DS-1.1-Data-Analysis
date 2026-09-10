@@ -22,8 +22,10 @@ This installs everything used across every lesson in this course — pandas, num
 
 ### 3. Work through a lesson
 
+**Work inside your cloned copy of this repo — don't copy individual notebooks or datasets out to another folder.** Notebooks load data and images with relative paths (e.g. `Datasets/titanic.csv`, `Images/DS_process.png`) that only resolve correctly from inside this repo's folder structure. Copy a notebook out on its own and those paths — and any embedded images — break.
+
 1. Read the lesson in [`Lessons/`](Lessons/)
-2. Open its companion notebook in [`Notebooks/`](Notebooks/) and complete the **Challenges** section from the lesson
+2. Open its companion notebook in [`Notebooks/`](Notebooks/) **in place** and complete the **Challenges** section from the lesson
 3. Commit your work as you go:
 
 ```
