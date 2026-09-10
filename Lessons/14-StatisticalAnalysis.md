@@ -8,7 +8,7 @@ By the end of this lesson, students will be able to:
 
 ## What is a histogram?
 
-A histogram is one method for estimating a density (see also [Applied Probability to DataFrame](AppliedProbabilitytodataframe.md)). This lesson introduces two model-based alternatives — GMM and KDE — that approximate the underlying probability density function instead of just binning and counting.
+A histogram is one method for estimating a density (see also [Applied Probability to DataFrame](09-AppliedProbabilitytodataframe.md)). This lesson introduces two model-based alternatives — GMM and KDE — that approximate the underlying probability density function instead of just binning and counting.
 
 
 ## Statistical Analysis

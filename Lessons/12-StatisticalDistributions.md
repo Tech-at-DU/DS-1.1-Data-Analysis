@@ -9,7 +9,7 @@ By the end of this lesson, students will be able to:
 
 ### Spread: Variance and Standard Deviation
 
-Mean/median/mode (see [Descriptive Statistics](DescriptiveStatistics.md)) describe the center of a distribution, but two datasets can share a mean and look completely different once you measure spread:
+Mean/median/mode (see [Descriptive Statistics](07-DescriptiveStatistics.md)) describe the center of a distribution, but two datasets can share a mean and look completely different once you measure spread:
 
 - **Variance** — the average of the squared differences from the mean. Squaring keeps positive and negative deviations from cancelling out, but it also puts variance in squared units, which is hard to interpret directly.
 - **Standard deviation** — the square root of variance, back in the original units. This is the number you'll actually reach for day to day ("the ticket price has a mean of $32 and a standard deviation of $50" is readable; "a variance of 2500 dollars-squared" is not).
@@ -27,7 +27,7 @@ A distribution is **skewed** when it isn't symmetric — one tail is longer than
 
 You rarely have data for an entire population — you work with a **sample** and infer about the population from it. How you sample matters: a **random sample** (every member has an equal chance of selection) supports valid inference; a **convenience sample** (whoever's easiest to reach) can silently bias every conclusion drawn from it.
 
-The **Central Limit Theorem** (see also [Normal Distribution](NormalDistribution.md)) is what makes sampling work in practice: take repeated random samples, compute the mean of each, and the distribution of *those means* approaches normal as sample size grows — even if the original data isn't normally distributed. That's why sample means can be used to estimate a population mean with a known, quantifiable margin of error.
+The **Central Limit Theorem** (see also [Normal Distribution](11-NormalDistribution.md)) is what makes sampling work in practice: take repeated random samples, compute the mean of each, and the distribution of *those means* approaches normal as sample size grows — even if the original data isn't normally distributed. That's why sample means can be used to estimate a population mean with a known, quantifiable margin of error.
 
 ### Counting Problems (Combinatorics)
 
@@ -71,7 +71,7 @@ Deliverable: a notebook with a stats summary table, 3 annotated histograms, a wo
 
 1. Calculate the mean, median, mode, variance, and standard deviation of the `Fare`, `Age`, and `SibSp` columns from the Titanic dataset — present as a small summary table
 2. Plot histograms for those same 3 columns; for each, state in a markdown cell whether it looks skewed and in which direction
-3. Write a function that draws repeated random samples from a column and plots the distribution of their means — confirm it looks normal even if the original column doesn't (reuse or adapt the one from [Normal Distribution](NormalDistribution.md))
+3. Write a function that draws repeated random samples from a column and plots the distribution of their means — confirm it looks normal even if the original column doesn't (reuse or adapt the one from [Normal Distribution](11-NormalDistribution.md))
 4. Solve these 5 counting problems using `math.perm`/`math.comb`, showing your code and final answer for each:
    - How many ways can 4 of the 12 passengers in a lifeboat be seated in the 4 front-row seats? (order matters)
    - How many different 3-person committees can be formed from a class of 15 students? (order doesn't matter)

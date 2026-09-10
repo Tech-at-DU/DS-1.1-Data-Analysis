@@ -1,6 +1,6 @@
 # Data Cleaning & Descriptive Statistics — Solutions
 
-Answers to the **Check Your Understanding** questions in [Lessons/DescriptiveStatistics.md](../Lessons/DescriptiveStatistics.md). Try each question yourself before reading the answer.
+Answers to the **Check Your Understanding** questions in [Lessons/07-DescriptiveStatistics.md](../Lessons/07-DescriptiveStatistics.md). Try each question yourself before reading the answer.
 
 1. `Age` is right-skewed with some outliers (a handful of much older passengers). The mean gets pulled toward those extreme values; the median doesn't, since it only cares about the middle position of the sorted data. Filling with the median keeps the fill value representative of a "typical" passenger instead of skewed by a few outliers.
 

@@ -1,6 +1,6 @@
 # Statistical Distributions & Sampling — Solutions
 
-Answers to the **Check Your Understanding** questions in [Lessons/StatisticalDistributions.md](../Lessons/StatisticalDistributions.md). Try each question yourself before reading the answer.
+Answers to the **Check Your Understanding** questions in [Lessons/12-StatisticalDistributions.md](../Lessons/12-StatisticalDistributions.md). Try each question yourself before reading the answer.
 
 1. **Whether order matters.** If rearranging the selection produces a different, distinct outcome (1st/2nd/3rd place, a PIN code), use a **permutation**. If only *which* items are selected matters, not their order (a committee, a hand of cards), use a **combination**.
 

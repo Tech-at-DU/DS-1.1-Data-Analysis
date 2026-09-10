@@ -14,10 +14,10 @@ This project empowers you to use a new and possibly never-before-seen dataset to
 
 All of the materials you need to complete the steps are in the lessons. Some good references:
 
-- [Applied Descriptive Statistics](../../Lessons/AppliedDescriptiveStatistics.md)
-- [Applied Probability on DataFrames](../../Lessons/AppliedProbabilitytodataframe.md) (PDFs, CDFs)
-- [Normal Distribution, CLT and Z-Scores](../../Lessons/NormalDistribution.md)
-- [Hypothesis Testing & Acceptable Error](../../Lessons/HypothesisTesting.md)
+- [Applied Descriptive Statistics](../../Lessons/08-AppliedDescriptiveStatistics.md)
+- [Applied Probability on DataFrames](../../Lessons/09-AppliedProbabilitytodataframe.md) (PDFs, CDFs)
+- [Normal Distribution, CLT and Z-Scores](../../Lessons/11-NormalDistribution.md)
+- [Hypothesis Testing & Acceptable Error](../../Lessons/15-HypothesisTesting.md)
 
 
 ### Evaluation

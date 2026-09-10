@@ -1,6 +1,6 @@
 # SQL for Data Analysis — Solutions
 
-Answers to the **Check Your Understanding** questions in [Lessons/SQL_DataAnalysis.md](../Lessons/SQL_DataAnalysis.md). Try each question yourself before reading the answer.
+Answers to the **Check Your Understanding** questions in [Lessons/17-SQL_DataAnalysis.md](../Lessons/17-SQL_DataAnalysis.md). Try each question yourself before reading the answer.
 
 1. `SELECT Genre, SUM(Global_Sales) FROM games GROUP BY Genre`.
 

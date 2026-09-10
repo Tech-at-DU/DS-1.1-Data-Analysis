@@ -41,26 +41,26 @@ An instructor reviews finished Challenge notebooks at the end — the Self-Check
 
 | # | Topic | Notes |
 |:-:|---|---|
-| 1 | [Introduction to Data Science](Lessons/IntroductiontoDataScience.md) | |
-| 2 | [Data Science Process & Tools](Lessons/DataScienceProcess.md) | Environment setup |
-| 3 | [Simple Data Manipulation](Lessons/SimpleDataManipulation.md) | pandas basics |
-| 4 | [How to Combine DataFrames](Lessons/HowtoCombineDataFrames.md) | merge, concat, melt |
-| 5 | [Data Manipulation & Visualization: Titanic Walkthrough](Lessons/DataManipulationVisualization.md) | |
-| 6 | [Data Manipulation & Visualization](Lessons/DataVisualization.md) | Chart types, data literacy |
-| 7 | [Data Cleaning & Descriptive Statistics](Lessons/DescriptiveStatistics.md) | |
-| 8 | [Applied Descriptive Statistics](Lessons/AppliedDescriptiveStatistics.md) | Implement mean/median/mode from scratch |
-| 9 | [Applied Probability on DataFrames](Lessons/AppliedProbabilitytodataframe.md) | PDF, CDF |
-| 10 | [Conditional Probability](Lessons/ConditionalProbability.md) | |
-| 11 | [Normal Distribution, CLT and Z-Scores](Lessons/NormalDistribution.md) | |
-| 12 | [Statistical Distributions & Sampling](Lessons/StatisticalDistributions.md) | Includes counting/combinatorics |
-| 13 | [Confidence Intervals & Outliers](Lessons/ConfidenceIntervals.md) | |
-| 14 | [Statistical Analysis: GMM, KDE, and Correlation](Lessons/StatisticalAnalysis.md) | |
-| 15 | [Hypothesis Testing & Acceptable Error](Lessons/HypothesisTesting.md) | |
-| 16 | [Time Series Analysis](Lessons/TimeSeriesData.md) | |
-| 17 | [SQL for Data Analysis](Lessons/SQL_DataAnalysis.md) | |
-| 18 | [Working with APIs & Real-World Data](Lessons/WorkingWithAPIs.md) | |
-| 19 | [AI-Assisted Data Analysis](Lessons/AI_AssistedAnalysis.md) | |
-| 20 | [Intro to Machine Learning](Lessons/IntroToMachineLearning.md) | Capstone |
+| 1 | [Introduction to Data Science](Lessons/01-IntroductiontoDataScience.md) | |
+| 2 | [Data Science Process & Tools](Lessons/02-DataScienceProcess.md) | Environment setup |
+| 3 | [Simple Data Manipulation](Lessons/03-SimpleDataManipulation.md) | pandas basics |
+| 4 | [How to Combine DataFrames](Lessons/04-HowtoCombineDataFrames.md) | merge, concat, melt |
+| 5 | [Data Manipulation & Visualization: Titanic Walkthrough](Lessons/05-DataManipulationVisualization.md) | |
+| 6 | [Data Manipulation & Visualization](Lessons/06-DataVisualization.md) | Chart types, data literacy |
+| 7 | [Data Cleaning & Descriptive Statistics](Lessons/07-DescriptiveStatistics.md) | |
+| 8 | [Applied Descriptive Statistics](Lessons/08-AppliedDescriptiveStatistics.md) | Implement mean/median/mode from scratch |
+| 9 | [Applied Probability on DataFrames](Lessons/09-AppliedProbabilitytodataframe.md) | PDF, CDF |
+| 10 | [Conditional Probability](Lessons/10-ConditionalProbability.md) | |
+| 11 | [Normal Distribution, CLT and Z-Scores](Lessons/11-NormalDistribution.md) | |
+| 12 | [Statistical Distributions & Sampling](Lessons/12-StatisticalDistributions.md) | Includes counting/combinatorics |
+| 13 | [Confidence Intervals & Outliers](Lessons/13-ConfidenceIntervals.md) | |
+| 14 | [Statistical Analysis: GMM, KDE, and Correlation](Lessons/14-StatisticalAnalysis.md) | |
+| 15 | [Hypothesis Testing & Acceptable Error](Lessons/15-HypothesisTesting.md) | |
+| 16 | [Time Series Analysis](Lessons/16-TimeSeriesData.md) | |
+| 17 | [SQL for Data Analysis](Lessons/17-SQL_DataAnalysis.md) | |
+| 18 | [Working with APIs & Real-World Data](Lessons/18-WorkingWithAPIs.md) | |
+| 19 | [AI-Assisted Data Analysis](Lessons/19-AI_AssistedAnalysis.md) | |
+| 20 | [Intro to Machine Learning](Lessons/20-IntroToMachineLearning.md) | Capstone |
 
 Extra project material lives in [`CA_lessons/`](CA_lessons/) ([Data Visualization Challenge](CA_lessons/Data_Viz_Challenge.md), [Linear Regression Tutorial](CA_lessons/Linear_Regression_Tutorial.md)) and [`Homework/`](Homework/).
 

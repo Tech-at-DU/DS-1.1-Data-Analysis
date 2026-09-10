@@ -16,7 +16,7 @@ Descriptive statistics summarize a dataset with a small number of representative
 - **Mode** — the most frequent value; the only one of the three that works on non-numeric (categorical) data.
 - **Range** — max minus min; the crudest measure of spread.
 
-Together these are sometimes abbreviated **MMMR**. Mean/median/mode describe **central tendency** — where the "middle" of the data is. Range (and later, variance/standard deviation — see [Statistical Distributions](StatisticalDistributions.md)) describes **spread** — how far values are scattered from that middle. Two datasets can share the same mean and look completely different once you look at spread.
+Together these are sometimes abbreviated **MMMR**. Mean/median/mode describe **central tendency** — where the "middle" of the data is. Range (and later, variance/standard deviation — see [Statistical Distributions](12-StatisticalDistributions.md)) describes **spread** — how far values are scattered from that middle. Two datasets can share the same mean and look completely different once you look at spread.
 
 ### Data Cleaning and Processing
 

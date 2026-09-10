@@ -1,6 +1,6 @@
 # Applied Probability on DataFrames — Solutions
 
-Answers to the **Check Your Understanding** questions in [Lessons/AppliedProbabilitytodataframe.md](../Lessons/AppliedProbabilitytodataframe.md). Try each question yourself before reading the answer.
+Answers to the **Check Your Understanding** questions in [Lessons/09-AppliedProbabilitytodataframe.md](../Lessons/09-AppliedProbabilitytodataframe.md). Try each question yourself before reading the answer.
 
 1. The **joint** probability `P(Survived=1 and Sex='female')` is out of the *entire* dataset — how many passengers are both female and survived, divided by everyone. The **conditional** probability `P(Survived=1 | Sex='female')` restricts the denominator to *only* female passengers first, then asks what fraction of *that* group survived. Conditional probability answers "given this subgroup, what happened," not "what fraction of everyone falls into both categories."
 

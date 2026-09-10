@@ -1,6 +1,6 @@
 # Introduction to Data Science — Solutions
 
-Answers to the **Check Your Understanding** questions in [Lessons/IntroductiontoDataScience.md](../Lessons/IntroductiontoDataScience.md). Try each question yourself before reading the answer.
+Answers to the **Check Your Understanding** questions in [Lessons/01-IntroductiontoDataScience.md](../Lessons/01-IntroductiontoDataScience.md). Try each question yourself before reading the answer.
 
 1. **Data analysis, data analysis + visualization, and statistical analysis.**
 

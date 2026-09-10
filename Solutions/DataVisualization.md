@@ -1,6 +1,6 @@
 # Data Manipulation & Visualization — Solutions
 
-Answers to the **Check Your Understanding** questions in [Lessons/DataVisualization.md](../Lessons/DataVisualization.md). Try each question yourself before reading the answer.
+Answers to the **Check Your Understanding** questions in [Lessons/06-DataVisualization.md](../Lessons/06-DataVisualization.md). Try each question yourself before reading the answer.
 
 1. **Categorical** (specifically ordinal). Even though `Pclass` is stored as a number, 1/2/3 represent labeled groups (1st/2nd/3rd class), not a continuous measurable quantity. Averaging it doesn't produce a meaningful "typical class" the way averaging `Age` produces a meaningful typical age — the numbers are labels with an order, not measurements.
 

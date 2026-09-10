@@ -21,10 +21,10 @@ By 2026, most data analysts write code alongside an AI assistant (Claude, ChatGP
 ### Where It Silently Fails
 
 - **Hallucinated columns or values** — an assistant may reference a column name that looks plausible but doesn't exist in *your* dataset, or state a statistic without actually having computed it
-- **Wrong statistical test for the situation** — e.g. suggesting a Z-test when the sample is small and σ is unknown (a T-test is correct — see [Hypothesis Testing](HypothesisTesting.md))
+- **Wrong statistical test for the situation** — e.g. suggesting a Z-test when the sample is small and σ is unknown (a T-test is correct — see [Hypothesis Testing](15-HypothesisTesting.md))
 - **Silently dropping or mishandling missing data** — code that "works" but quietly excludes rows with NaN values, changing the answer without telling you
 - **Confidently wrong interpretation** — correct code, but an incorrect plain-language explanation of what the result means (e.g. treating a correlation as causation)
-- **Outdated library APIs** — suggesting a deprecated function (this exact problem shows up several times elsewhere in this course's own history — see the fixed `.append()` and `sns.distplot` calls in [How to Combine DataFrames](HowtoCombineDataFrames.md) and [Applied Probability](AppliedProbabilitytodataframe.md))
+- **Outdated library APIs** — suggesting a deprecated function (this exact problem shows up several times elsewhere in this course's own history — see the fixed `.append()` and `sns.distplot` calls in [How to Combine DataFrames](04-HowtoCombineDataFrames.md) and [Applied Probability](09-AppliedProbabilitytodataframe.md))
 
 ### Verifying AI-Generated Analysis
 
@@ -48,7 +48,7 @@ Vague prompts get vague, ungrounded answers. Give the assistant what it needs to
 
 Answers: [Solutions/AI_AssistedAnalysis.md](../Solutions/AI_AssistedAnalysis.md).
 
-1. The Challenge 2 fare comparison (survivors vs. non-survivors) is a *two-sample* test, unlike the one-sample tests in [Hypothesis Testing](HypothesisTesting.md). What makes it two-sample?
+1. The Challenge 2 fare comparison (survivors vs. non-survivors) is a *two-sample* test, unlike the one-sample tests in [Hypothesis Testing](15-HypothesisTesting.md). What makes it two-sample?
 2. Give one example from this lesson of an AI failure mode that wouldn't cause a Python error, yet would still produce a wrong answer.
 3. Why is pasting the actual error message better prompting practice than summarizing it in your own words?
 
@@ -66,7 +66,7 @@ Answers: [Solutions/AI_AssistedAnalysis.md](../Solutions/AI_AssistedAnalysis.md)
 Deliverable: a notebook containing an AI assistant's original response, your verification of it, and a corrected version where needed, for both tasks below.
 
 1. **Verify a claim.** Ask an AI assistant: *"Using the Titanic dataset, what percentage of passengers under 18 survived?"* Paste its full response (code + stated answer) into a markdown cell. Then independently compute the same statistic yourself with pandas. Do they match? If not, explain in a markdown cell what the assistant got wrong.
-2. **Verify a test choice.** Ask an AI assistant to test whether the average `Fare` paid by survivors differs from non-survivors, and to choose and run the appropriate statistical test. Paste its response. Then, using what you learned in [Hypothesis Testing](HypothesisTesting.md), state whether it picked the right test (Z-test vs. T-test) and why, and re-run the test yourself to confirm the conclusion.
+2. **Verify a test choice.** Ask an AI assistant to test whether the average `Fare` paid by survivors differs from non-survivors, and to choose and run the appropriate statistical test. Paste its response. Then, using what you learned in [Hypothesis Testing](15-HypothesisTesting.md), state whether it picked the right test (Z-test vs. T-test) and why, and re-run the test yourself to confirm the conclusion.
 3. Write down 2 prompting mistakes you made or noticed during this exercise (e.g. a prompt that was too vague, or an answer you almost trusted without checking) and what you'd do differently
 
 ### Self-Check

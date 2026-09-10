@@ -1,6 +1,6 @@
 # How to Combine DataFrames — Solutions
 
-Answers to the **Check Your Understanding** questions in [Lessons/HowtoCombineDataFrames.md](../Lessons/HowtoCombineDataFrames.md). Try each question yourself before reading the answer.
+Answers to the **Check Your Understanding** questions in [Lessons/04-HowtoCombineDataFrames.md](../Lessons/04-HowtoCombineDataFrames.md). Try each question yourself before reading the answer.
 
 1. `pd.merge(df1, df2, on='student_id')`.
 

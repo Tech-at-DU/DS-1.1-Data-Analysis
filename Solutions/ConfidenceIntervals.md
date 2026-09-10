@@ -1,6 +1,6 @@
 # Confidence Intervals & Outliers — Solutions
 
-Answers to the **Check Your Understanding** questions in [Lessons/ConfidenceIntervals.md](../Lessons/ConfidenceIntervals.md). Try each question yourself before reading the answer.
+Answers to the **Check Your Understanding** questions in [Lessons/13-ConfidenceIntervals.md](../Lessons/13-ConfidenceIntervals.md). Try each question yourself before reading the answer.
 
 1. `ci_z` assumes you **already know** the true population standard deviation (σ) and plugs it in directly, using a critical value from the normal distribution. `ci_t` doesn't assume you know σ — it **estimates** spread from the sample itself (the sample standard deviation) and uses the t-distribution instead of the normal, which has heavier tails to account for the extra uncertainty of estimating σ from a limited sample. That's why `ci_t` is often at least as wide as `ci_z`, sometimes wider.
 

@@ -1,6 +1,6 @@
 # Time Series Analysis — Solutions
 
-Answers to the **Check Your Understanding** questions in [Lessons/TimeSeriesData.md](../Lessons/TimeSeriesData.md). Try each question yourself before reading the answer.
+Answers to the **Check Your Understanding** questions in [Lessons/16-TimeSeriesData.md](../Lessons/16-TimeSeriesData.md). Try each question yourself before reading the answer.
 
 1. Log returns are **additive** across periods (you sum log-price differences), while simple percent returns **compound multiplicatively**. For small returns the two are close approximations of each other, but they aren't mathematically identical — that's why they land near each other (3.20% vs. 3.22%) without matching exactly.
 

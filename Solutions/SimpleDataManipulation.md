@@ -1,6 +1,6 @@
 # Simple Data Manipulation with Pandas — Solutions
 
-Answers to the **Check Your Understanding** questions in [Lessons/SimpleDataManipulation.md](../Lessons/SimpleDataManipulation.md). Try each question yourself before reading the answer.
+Answers to the **Check Your Understanding** questions in [Lessons/03-SimpleDataManipulation.md](../Lessons/03-SimpleDataManipulation.md). Try each question yourself before reading the answer.
 
 1. `df.loc[:2]` returns **3 rows** (index 0, 1, 2) — `.loc` slicing is label-based and *inclusive* of the endpoint. `df.iloc[:2]` returns **2 rows** (position 0, 1) — `.iloc` slicing is position-based and follows normal Python slicing rules, which exclude the endpoint.
 

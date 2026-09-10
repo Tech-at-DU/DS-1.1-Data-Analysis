@@ -55,7 +55,7 @@ duckdb.sql("""
 """).df()
 ```
 
-This is an **inner join** — only rows with a matching `Platform` in both tables survive. Just like `pd.merge()`, SQL also supports `LEFT JOIN`, `RIGHT JOIN`, and `FULL OUTER JOIN` for when you want unmatched rows to survive too (see [How to Combine DataFrames](HowtoCombineDataFrames.md) for the pandas side of this same concept).
+This is an **inner join** — only rows with a matching `Platform` in both tables survive. Just like `pd.merge()`, SQL also supports `LEFT JOIN`, `RIGHT JOIN`, and `FULL OUTER JOIN` for when you want unmatched rows to survive too (see [How to Combine DataFrames](04-HowtoCombineDataFrames.md) for the pandas side of this same concept).
 
 ### Check Your Understanding
 

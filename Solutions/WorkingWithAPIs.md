@@ -1,6 +1,6 @@
 # Working with APIs & Real-World Data — Solutions
 
-Answers to the **Check Your Understanding** questions in [Lessons/WorkingWithAPIs.md](../Lessons/WorkingWithAPIs.md). Try each question yourself before reading the answer.
+Answers to the **Check Your Understanding** questions in [Lessons/18-WorkingWithAPIs.md](../Lessons/18-WorkingWithAPIs.md). Try each question yourself before reading the answer.
 
 1. `200` means the request succeeded. `4xx` codes mean something's wrong with **your** request (a bad parameter, missing authentication, a URL that doesn't exist — `404`). `5xx` codes mean something's wrong on the **server's** end (their code crashed, their service is overloaded) — not something you did.
 

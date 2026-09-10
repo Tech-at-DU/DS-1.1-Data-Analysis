@@ -1,6 +1,6 @@
 # Hypothesis Testing & Acceptable Error — Solutions
 
-Answers to the **Check Your Understanding** questions in [Lessons/HypothesisTesting.md](../Lessons/HypothesisTesting.md). Try each question yourself before reading the answer.
+Answers to the **Check Your Understanding** questions in [Lessons/15-HypothesisTesting.md](../Lessons/15-HypothesisTesting.md). Try each question yourself before reading the answer.
 
 1. **Two-tail.** The alternative hypothesis is "the drug has an effect on response time" (`μ ≠ 1.2`) — it doesn't specify the direction of the effect (faster *or* slower response). A two-tail test checks both directions at once. A one-tail test would only be appropriate if the alternative specifically claimed the drug makes response time *faster* (or specifically *slower*).
 

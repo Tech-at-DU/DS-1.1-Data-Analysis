@@ -1,6 +1,6 @@
 # AI-Assisted Data Analysis — Solutions
 
-Answers to the **Check Your Understanding** questions in [Lessons/AI_AssistedAnalysis.md](../Lessons/AI_AssistedAnalysis.md). Try each question yourself before reading the answer.
+Answers to the **Check Your Understanding** questions in [Lessons/19-AI_AssistedAnalysis.md](../Lessons/19-AI_AssistedAnalysis.md). Try each question yourself before reading the answer.
 
 1. It's two-sample because you're comparing two **separate, independent groups** against each other — the fares paid by survivors vs. the fares paid by non-survivors — rather than comparing one group's mean against a single fixed hypothesized value (like "is the average score 65?" in the Hypothesis Testing lesson). Two groups being compared to each other means `ttest_ind`, not `ttest_1samp`.
 

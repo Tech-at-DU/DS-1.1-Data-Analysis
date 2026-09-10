@@ -1,6 +1,6 @@
 # Applied Descriptive Statistics — Solutions
 
-Answers to the **Check Your Understanding** questions in [Lessons/AppliedDescriptiveStatistics.md](../Lessons/AppliedDescriptiveStatistics.md). Try each question yourself before reading the answer.
+Answers to the **Check Your Understanding** questions in [Lessons/08-AppliedDescriptiveStatistics.md](../Lessons/08-AppliedDescriptiveStatistics.md). Try each question yourself before reading the answer.
 
 1. Mean > median suggests the distribution is **right-skewed** — a handful of higher values (the data array has values up to 10, while most values cluster lower, around 0-5) pull the mean up without moving the median, since the median only cares about the middle position, not the magnitude of extreme values.
 

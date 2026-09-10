@@ -9,7 +9,7 @@ By the end of this lesson, students will be able to:
 
 ### From Descriptive to Predictive
 
-Every lesson so far in this course has been **descriptive** or **inferential**: summarizing what the data shows, or testing a specific claim about it (see [Data Visualization](DataVisualization.md) for that distinction). Machine learning is the next step — **predictive** analytics: using patterns in existing data to make a prediction about a new, unseen case. It's built entirely on the foundation from the rest of this course — the same DataFrame, the same cleaning and feature engineering from [Descriptive Statistics](DescriptiveStatistics.md), the same correlation ideas from [Statistical Analysis](StatisticalAnalysis.md).
+Every lesson so far in this course has been **descriptive** or **inferential**: summarizing what the data shows, or testing a specific claim about it (see [Data Visualization](06-DataVisualization.md) for that distinction). Machine learning is the next step — **predictive** analytics: using patterns in existing data to make a prediction about a new, unseen case. It's built entirely on the foundation from the rest of this course — the same DataFrame, the same cleaning and feature engineering from [Descriptive Statistics](07-DescriptiveStatistics.md), the same correlation ideas from [Statistical Analysis](14-StatisticalAnalysis.md).
 
 Two categories cover most of what you'll do as a beginner:
 - **Regression** — predicting a continuous number (a price, a score, a temperature)

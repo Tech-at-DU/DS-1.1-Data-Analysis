@@ -1,6 +1,6 @@
 # Data Science Process & Tools — Solutions
 
-Answers to the **Check Your Understanding** questions in [Lessons/DataScienceProcess.md](../Lessons/DataScienceProcess.md). Try each question yourself before reading the answer.
+Answers to the **Check Your Understanding** questions in [Lessons/02-DataScienceProcess.md](../Lessons/02-DataScienceProcess.md). Try each question yourself before reading the answer.
 
 1. **"Clean it"** (stage 3) — handling missing values is part of data cleaning, before exploration/analysis.
 

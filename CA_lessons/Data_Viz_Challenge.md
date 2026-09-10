@@ -1,6 +1,6 @@
 # Data Visualization Challenge
 
-An open-ended project applying everything from [Data Manipulation & Visualization](../Lessons/DataVisualization.md) and [Data Manipulation & Visualization: Titanic Walkthrough](../Lessons/DataManipulationVisualization.md) to a new dataset.
+An open-ended project applying everything from [Data Manipulation & Visualization](../Lessons/06-DataVisualization.md) and [Data Manipulation & Visualization: Titanic Walkthrough](../Lessons/05-DataManipulationVisualization.md) to a new dataset.
 
 ## Dataset
 
@@ -29,7 +29,7 @@ Answers: [Solutions/Data_Viz_Challenge.md](../Solutions/Data_Viz_Challenge.md).
 1. **State your angle** in a markdown cell at the top of the notebook, in 1-2 sentences
 2. **Clean the data first** — this dataset has messy fields (e.g. `Rotten Tomatoes` is a string percentage, `Genres`/`Country`/`Language` are comma-separated lists in one column). Handle at least 2 of these before charting.
 3. **5-7 charts**, each with a title, axis labels, and a one-sentence markdown takeaway underneath it — what does this chart show, in plain language?
-4. **Use at least 3 different chart types** across your 5-7 charts (see [Data Visualization](../Lessons/DataVisualization.md) for chart-type guidance)
+4. **Use at least 3 different chart types** across your 5-7 charts (see [Data Visualization](../Lessons/06-DataVisualization.md) for chart-type guidance)
 5. **A closing summary** (3-4 sentences) tying the charts back to your stated angle
 
 ## Self-Check

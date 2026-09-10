@@ -1,6 +1,6 @@
 # Conditional Probability — Solutions
 
-Answers to the **Check Your Understanding** questions in [Lessons/ConditionalProbability.md](../Lessons/ConditionalProbability.md). These are not the Challenges — the Challenges are open-ended and reviewed by an instructor. Try each question yourself before reading the answer.
+Answers to the **Check Your Understanding** questions in [Lessons/10-ConditionalProbability.md](../Lessons/10-ConditionalProbability.md). These are not the Challenges — the Challenges are open-ended and reviewed by an instructor. Try each question yourself before reading the answer.
 
 1. **0.4 (40%).** `4 / (4 + 6)`.
 

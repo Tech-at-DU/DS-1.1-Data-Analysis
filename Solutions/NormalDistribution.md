@@ -1,6 +1,6 @@
 # Normal Distribution, CLT and Z-Scores — Solutions
 
-Answers to the **Check Your Understanding** questions in [Lessons/NormalDistribution.md](../Lessons/NormalDistribution.md). Try each question yourself before reading the answer.
+Answers to the **Check Your Understanding** questions in [Lessons/11-NormalDistribution.md](../Lessons/11-NormalDistribution.md). Try each question yourself before reading the answer.
 
 1. The spread **shrinks**. The standard error of the mean is `std / sqrt(n)` — as `n` grows, the denominator grows, so the sampling distribution of the mean gets narrower and more tightly clustered around the true population mean. Bigger samples give more reliable (less variable) mean estimates.
 

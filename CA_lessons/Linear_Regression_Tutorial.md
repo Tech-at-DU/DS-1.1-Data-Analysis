@@ -1,10 +1,10 @@
 # Linear Regression Tutorial
 
-A focused deep-dive on linear regression, building on the brief single-variable example in [Intro to Machine Learning](../Lessons/IntroToMachineLearning.md). That lesson predicts a score from one variable (hours studied); this tutorial extends to **multiple** predictors at once.
+A focused deep-dive on linear regression, building on the brief single-variable example in [Intro to Machine Learning](../Lessons/20-IntroToMachineLearning.md). That lesson predicts a score from one variable (hours studied); this tutorial extends to **multiple** predictors at once.
 
 ## Simple Linear Regression (recap)
 
-One predictor, one target — a straight line: `y = mx + b`. See [Intro to Machine Learning](../Lessons/IntroToMachineLearning.md#regression-example) for the worked example on `Datasets/student_scores.csv`.
+One predictor, one target — a straight line: `y = mx + b`. See [Intro to Machine Learning](../Lessons/20-IntroToMachineLearning.md#regression-example) for the worked example on `Datasets/student_scores.csv`.
 
 ## Multiple Linear Regression
 

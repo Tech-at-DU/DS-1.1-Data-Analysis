@@ -1,6 +1,6 @@
 # Statistical Analysis: GMM, KDE, and Correlation — Solutions
 
-Answers to the **Check Your Understanding** questions in [Lessons/StatisticalAnalysis.md](../Lessons/StatisticalAnalysis.md). Try each question yourself before reading the answer.
+Answers to the **Check Your Understanding** questions in [Lessons/14-StatisticalAnalysis.md](../Lessons/14-StatisticalAnalysis.md). Try each question yourself before reading the answer.
 
 1. Near **0** means little to no *linear* relationship between the two variables. Near **+1** means a strong positive linear relationship — as one variable increases, the other tends to increase too, in a fairly straight-line way. Near **-1** means a strong negative linear relationship — as one increases, the other tends to decrease.
 
