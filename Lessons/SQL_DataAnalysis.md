@@ -57,6 +57,14 @@ duckdb.sql("""
 
 This is an **inner join** — only rows with a matching `Platform` in both tables survive. Just like `pd.merge()`, SQL also supports `LEFT JOIN`, `RIGHT JOIN`, and `FULL OUTER JOIN` for when you want unmatched rows to survive too (see [How to Combine DataFrames](HowtoCombineDataFrames.md) for the pandas side of this same concept).
 
+### Check Your Understanding
+
+Answers: [Solutions/SQL_DataAnalysis.md](../Solutions/SQL_DataAnalysis.md).
+
+1. What's the SQL equivalent of `df.groupby('Genre')['Global_Sales'].sum()`?
+2. What's the difference between filtering with `WHERE` and filtering with `HAVING`?
+3. Why can `JOIN` (inner join) drop rows that `LEFT JOIN` would have kept?
+
 ### Topics
 - Querying a CSV directly with DuckDB
 - `SELECT`, `WHERE`, `ORDER BY`, `LIMIT`
@@ -85,9 +93,11 @@ Using `Datasets/vgsales.csv`:
 - Write a query using `LEFT JOIN` instead of `JOIN` against `platform_makers` — how many more rows show up, and what does that tell you about platforms missing from the lookup table?
 - Load `Datasets/starbucks_drinkMenu_expanded.csv` into DuckDB and write 2 questions and answers of your own
 
-### Rubric
-| Criteria | Meets expectations |
-|---|---|
-| SQL/pandas agreement | All 7 questions answered both ways, with matching results |
-| Aggregation | Questions 3, 5, 6 use correct `GROUP BY`/`HAVING` syntax |
-| Join | Question 7's join correctly matches platforms to makers |
+### Self-Check
+- [ ] Q1: top game is **Wii Sports** (82.74M)
+- [ ] Q2: **1,325** games on the Wii platform
+- [ ] Q4: **Electronic Arts** has the most games (1,351)
+- [ ] Q6: **7 genres** have combined `Global_Sales` over 500 (Action, Sports, Shooter, Role-Playing, Platform, Misc, Racing)
+- [ ] Q7: **Nintendo ≈ 2000.3**, **Microsoft ≈ 980.0**, **Sony ≈ 957.8** total `Global_Sales`
+- [ ] Every question's SQL answer and pandas answer produce the **same** numbers — if they don't, one of your two approaches has a bug
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/SQL_DataAnalysis.md))

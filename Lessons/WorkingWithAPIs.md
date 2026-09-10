@@ -49,6 +49,14 @@ df = pd.json_normalize(raw["results"])
 - **Missing/optional fields** — unlike a CSV with a fixed set of columns, not every JSON record has every field. Use `.get('field', default)` instead of `['field']` to avoid `KeyError` on records that omit it.
 - **API keys** — many APIs require a key for authentication. **Never commit an API key to git** — read it from an environment variable or a local, git-ignored file instead.
 
+### Check Your Understanding
+
+Answers: [Solutions/WorkingWithAPIs.md](../Solutions/WorkingWithAPIs.md).
+
+1. What does a `200` status code mean? What's the general difference between a `4xx` and a `5xx` response?
+2. Why use `pd.json_normalize()` instead of just passing a raw nested dict straight into `pd.DataFrame()`?
+3. Why check `response.status_code` before calling `response.json()`, instead of just calling `.json()` directly?
+
 ### Topics
 - HTTP requests: `requests.get()`, status codes
 - JSON structure and `pd.json_normalize()`
@@ -81,10 +89,14 @@ This lesson uses the free [Open-Meteo](https://open-meteo.com/) weather API (no 
 - Wrap your request in a function that checks `response.status_code` and raises a clear error message if the request failed
 - Find a second no-key public API (see the list linked in Resources) and pull one dataset from it
 
-### Rubric
-| Criteria | Meets expectations |
-|---|---|
-| Request | Live API call made, status code checked before using the response |
-| Parsing | JSON correctly converted into a DataFrame (not left as a raw nested dict) |
-| Questions | All 4 weather questions answered with correct code |
+### Self-Check
+
+Weather data changes daily, so there's no fixed number to check your answer against here — instead, verify your *process*:
+
+- [ ] My request checks `response.status_code` (or calls `.raise_for_status()`) before touching the response body
+- [ ] My `current` weather data is a DataFrame or dict with named fields (`temperature_2m`, `wind_speed_10m`), not a raw unparsed JSON string
+- [ ] My `daily` forecast is a DataFrame with **7 rows** (one per day) and columns for date, max temp, min temp — not one row with 7-item lists crammed into each cell
+- [ ] "Highest forecasted max" and "average forecasted min" are each a single number, computed with pandas (`.max()`, `.mean()`), not read off the printout by eye
+- [ ] My line chart has both max and min temperature, a legend, and readable date labels
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/WorkingWithAPIs.md))
 | Error handling | Stretch: function correctly detects and reports a failed request |

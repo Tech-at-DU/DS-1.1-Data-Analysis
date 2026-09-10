@@ -39,6 +39,15 @@ def conditional_prob(subset_count, event_count, sample_space):
 
 Worked example on the hiring numbers above: of the 7,000 hires, 1,500 have brown hair. `conditional_prob(1500, 7000, 3_000_000)` gives the probability someone has brown hair *given that they were hired* — different from the unconditional probability of having brown hair in the whole applicant pool.
 
+### Check Your Understanding
+
+Answer these on your own before moving on — if you get stuck, re-read the section above. Answers: [Solutions/ConditionalProbability.md](../Solutions/ConditionalProbability.md).
+
+1. A bag has 4 red marbles and 6 blue marbles. What's the probability of drawing a red marble?
+2. Are two consecutive coin flips independent or dependent events? Why?
+3. `P(A) = 0.5` and `P(A and B) = 0.2`. What's `P(B|A)`?
+4. True or false: two mutually exclusive events (each with probability > 0) can also be independent.
+
 ### Topics
 - Review of basic data exploration and analysis
 - Independent vs. dependent, mutually exclusive events
@@ -69,10 +78,13 @@ Deliverable: a notebook containing your `probability()` and `conditional_prob()`
 ### Stretch Challenges
 - Create one visualization (bar chart) per conditional-probability question comparing the conditional probability against the unconditional baseline
 
-### Rubric
-| Criteria | Meets expectations |
-|---|---|
-| Functions | `probability()` and `conditional_prob()` implemented and produce correct results on the worked example |
-| Questions | 7 questions answered, each with working pandas code and a stated percentage |
-| Correctness | Conditional questions are actually computed as conditional (not unconditional) probabilities |
-| Clarity | Each answer has a one-line markdown explanation of what it means |
+### Self-Check
+
+Work through this before you consider the lesson done. You're the only one checking it right now — an instructor will review the finished notebook later, so this list is here to catch problems while they're still easy to fix.
+
+- [ ] `probability(7000, 3_000_000)` returns `0.002333...` — if yours doesn't, check your formula
+- [ ] `conditional_prob()` gives a **different** number than plain `probability()` when tested on the brown-hair example (`conditional_prob(1500, 7000, 3_000_000)` vs. `probability(1500, 3_000_000)`) — if they're equal, something's wrong, since conditioning on "was hired" should change the probability
+- [ ] I answered 7 of the 10 questions, each with pandas code that actually runs (not just described in words)
+- [ ] For every "given that..." question, I can point to the exact line of code that applies the condition (the filter that happens *before* computing the probability)
+- [ ] Each answer has a one-line plain-English explanation, not just a bare number
+- [ ] I got all 4 Check Your Understanding questions right (see [Solutions](../Solutions/ConditionalProbability.md)) — if not, revisit that section before trusting my Challenge answers

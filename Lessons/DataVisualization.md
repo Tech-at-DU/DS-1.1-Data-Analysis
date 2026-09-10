@@ -18,12 +18,20 @@ The right chart depends on the question, not personal taste:
 ### Data Literacy
 
 - **Continuous vs. discrete/categorical data** — continuous data (age, fare) can take any value in a range and supports averaging; categorical data (sex, embarked port) is a fixed set of labels and needs counts/proportions instead of means.
-- **Descriptive vs. predictive analytics** — descriptive analytics summarizes what already happened in the data ("62% of first-class passengers survived"); predictive analytics uses that data to estimate what will happen for new/unseen cases (a model estimating survival odds for a new passenger). This course builds descriptive skills first because predictive work (see [Intro to Machine Learning](../README.md)) depends on it.
+- **Descriptive vs. predictive analytics** — descriptive analytics summarizes what already happened in the data ("63% of first-class passengers survived"); predictive analytics uses that data to estimate what will happen for new/unseen cases (a model estimating survival odds for a new passenger). This course builds descriptive skills first because predictive work (see [Intro to Machine Learning](../README.md)) depends on it.
 
 ### Common Data-Handling Problems
 - Missing values silently skewing an average or a chart
 - Wrong dtype (a numeric column read in as text) breaking sort order or math
 - Filtering with the wrong boolean logic and getting no rows — or all of them
+
+### Check Your Understanding
+
+Answers: [Solutions/DataVisualization.md](../Solutions/DataVisualization.md).
+
+1. `Pclass` is stored as a number (1, 2, 3). Is it continuous or categorical data? Justify your answer.
+2. What goes wrong, readability-wise, once a pie chart has more than 4-5 slices?
+3. Give one descriptive claim and one predictive claim you could make about the same Titanic dataset.
 
 ### Topics
 - Building visualizations with seaborn: scatterplots, bar graphs/histograms, pie charts
@@ -48,10 +56,10 @@ Deliverable: a notebook with 4 written questions, the pandas code that answers e
    - 1 question where you choose the chart type — justify the choice in a markdown cell
 3. Every chart needs a title and axis labels
 
-### Rubric
-| Criteria | Meets expectations |
-|---|---|
-| Questions | 4 clear, answerable questions about the Titanic data |
-| Chart-type fit | Each chart type matches the kind of question it's answering |
-| Chart quality | Titles, axis labels, and legible output on all 4 charts |
-| Justification | Written explanation for the free-choice chart in question 4 |
+### Self-Check
+- [ ] I have 4 questions, each clearly answerable from the Titanic data (not vague)
+- [ ] My scatterplot compares two **continuous** variables (e.g. Age vs. Fare), not a continuous vs. categorical pair
+- [ ] My pie chart has 4 or fewer slices — if it has more, switch to a bar chart instead
+- [ ] All 4 charts have a title and labeled axes — glance at each one and check
+- [ ] My free-choice chart (question 4) has a written justification for why I picked that chart type
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/DataVisualization.md))

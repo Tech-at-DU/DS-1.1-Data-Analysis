@@ -176,6 +176,14 @@ pd.crosstab(df['Sex'], df['Embarked'])
 sns.heatmap(pd.crosstab(df['Sex'], df['Embarked'], normalize='index'), cmap="YlGnBu", annot=True)
 ```
 
+### Check Your Understanding
+
+Answers: [Solutions/DataManipulationVisualization.md](../Solutions/DataManipulationVisualization.md).
+
+1. `pd.crosstab(df['Sex'], df['Pclass'])` and `df.groupby('Sex')['Pclass'].value_counts().unstack()` produce the same table. Why?
+2. When is `normalize='index'` in `pd.crosstab()` more useful than raw counts?
+3. Name a chart type well-suited to comparing counts across two categorical variables at once.
+
 ### Topics
 - Combining filtering, `.groupby()`, and `pd.crosstab()` with visualization
 - Choosing a chart for a categorical comparison: histogram, bar, box, heatmap
@@ -193,9 +201,10 @@ Deliverable: a notebook repeating the same style of analysis as this lesson, but
 2. Build a crosstab of `Sex` vs. `Pclass` for `Embarked == 'S'` passengers and visualize it as a heatmap
 3. Write and answer 2 of your own questions using `.groupby()` or `pd.crosstab()` on any column combination not already covered above
 
-### Rubric
-| Criteria | Meets expectations |
-|---|---|
-| Southampton analysis | All 3 repeated analyses correct for `Embarked == 'S'` |
-| Crosstab + heatmap | Heatmap correctly reflects the crosstab values |
-| Own questions | 2 original questions, each using `.groupby()` or `pd.crosstab()` |
+### Self-Check
+- [ ] My Southampton (`Embarked == 'S'`) subset has **644** passengers — if not, check your filter
+- [ ] Average age: **~27.8** for female, **~30.3** for male Southampton passengers
+- [ ] Oldest Southampton passenger: **63** (female), **80** (male)
+- [ ] My heatmap's cell values match what `pd.crosstab(...)` prints as a plain table — check a couple of cells by eye
+- [ ] My 2 original questions each use `.groupby()` or `pd.crosstab()`, not manual filtering + counting
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/DataManipulationVisualization.md))

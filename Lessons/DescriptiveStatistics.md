@@ -29,6 +29,14 @@ Raw data is rarely analysis-ready. Common cleaning steps:
   - *One-hot encoding*: create a separate 0/1 column per category (`pd.get_dummies`) — use when categories have no order, so the model doesn't infer a false ranking.
 - **Data dictionaries** — a reference document describing what each column means, its type, and valid values. Write one for any dataset you hand off to someone else.
 
+### Check Your Understanding
+
+Answers: [Solutions/DescriptiveStatistics.md](../Solutions/DescriptiveStatistics.md).
+
+1. Why fill missing `Age` values with the median rather than the mean?
+2. When should you use one-hot encoding instead of integer/label encoding?
+3. What can the mode do that mean and median can't?
+
 ### Topics
 - Descriptive statistics: mean, median, mode, range
 - Central tendency vs. spread
@@ -56,10 +64,11 @@ Deliverable: a notebook where the Titanic dataset ends with 3 new columns and no
    - Apply integer encoding to `Sex` (it's binary, so ordering doesn't matter)
 4. Complete this [notebook on data collation and wrangling](../Notebooks/DescriptiveStatistics.ipynb)
 
-### Rubric
-| Criteria | Meets expectations |
-|---|---|
-| Cleaning | No nulls remain in `Age`, `Embarked`, `Fare`; fill strategy explained |
-| Feature engineering | All 3 named columns (`family_size`, `is_alone`, `age_group`) present and correctly computed |
-| Encoding | `age_group`/`Embarked` one-hot encoded, `Sex` integer encoded |
-| Explanation | Markdown cell justifying the median-fill choice |
+### Self-Check
+- [ ] The median `Age` I filled with is **28.0** — if yours differs a lot, double-check you dropped nulls before computing it
+- [ ] The mode `Embarked` I filled with is **'S'** (644 of the non-null rows)
+- [ ] `.isnull().sum()` shows **0** for `Age`, `Embarked`, and `Fare` after cleaning
+- [ ] `family_size`, `is_alone`, and `age_group` all exist as columns and look right on a quick `.head()` check
+- [ ] `age_group` and `Embarked` are one-hot encoded (multiple 0/1 columns); `Sex` is integer encoded (one column, 0/1)
+- [ ] I have a markdown cell explaining why median (not mean) was the right fill choice
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/DescriptiveStatistics.md))

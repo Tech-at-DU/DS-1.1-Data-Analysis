@@ -16,6 +16,14 @@ Produce a short visual analysis (5-7 charts) that tells a coherent story about t
 
 You're not required to use one of these — pick your own angle if you have one, but state it explicitly.
 
+## Check Your Understanding
+
+Answers: [Solutions/Data_Viz_Challenge.md](../Solutions/Data_Viz_Challenge.md).
+
+1. `Rotten Tomatoes` is stored as a string like `"96%"`. What do you need to do before you can compute a numeric average of it?
+2. Why pick your angle *before* making charts, rather than making charts first and seeing what turns up?
+3. Name one thing a coherent-narrative deliverable like this one checks for that a fixed "here's the correct number" answer key wouldn't catch.
+
 ## Requirements
 
 1. **State your angle** in a markdown cell at the top of the notebook, in 1-2 sentences
@@ -24,10 +32,14 @@ You're not required to use one of these — pick your own angle if you have one,
 4. **Use at least 3 different chart types** across your 5-7 charts (see [Data Visualization](../Lessons/DataVisualization.md) for chart-type guidance)
 5. **A closing summary** (3-4 sentences) tying the charts back to your stated angle
 
-## Rubric
-| Criteria | Meets expectations |
-|---|---|
-| Angle | Clearly stated, and every chart supports it (no unrelated charts) |
-| Data cleaning | At least 2 messy fields handled correctly before charting |
-| Chart quality | All charts titled, labeled, and legible; at least 3 chart types used |
-| Narrative | Each chart has a takeaway; closing summary ties them together |
+## Self-Check
+
+This project is open-ended, so there's no single correct chart set — check your *process* and a couple of fixed facts instead:
+
+- [ ] The dataset has **16,744** total rows. Platform counts: Netflix **3,560**, Hulu **903**, Prime Video **12,354**, Disney+ **564** — if your counts are wildly different, check your filter logic
+- [ ] My stated angle is 1-2 sentences, written *before* the charts, and every chart I made actually supports it (if a chart doesn't fit the angle, cut it or change the angle)
+- [ ] I handled at least 2 messy fields (e.g. `Rotten Tomatoes` converted to a number, or `Genres`/`Country` split out of their comma-separated string)
+- [ ] I used at least 3 different chart types across my 5-7 charts
+- [ ] Every chart has a title, labeled axes, and a one-sentence takeaway underneath it
+- [ ] My closing summary explicitly refers back to my stated angle, not just a generic wrap-up
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/Data_Viz_Challenge.md))

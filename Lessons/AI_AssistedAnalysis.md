@@ -44,6 +44,14 @@ Vague prompts get vague, ungrounded answers. Give the assistant what it needs to
 - **Paste the real error message**, not a summary of it, when debugging
 - **Ask for the assumptions**, explicitly: "what does this test assume about my data, and does my data meet those assumptions?"
 
+### Check Your Understanding
+
+Answers: [Solutions/AI_AssistedAnalysis.md](../Solutions/AI_AssistedAnalysis.md).
+
+1. The Challenge 2 fare comparison (survivors vs. non-survivors) is a *two-sample* test, unlike the one-sample tests in [Hypothesis Testing](HypothesisTesting.md). What makes it two-sample?
+2. Give one example from this lesson of an AI failure mode that wouldn't cause a Python error, yet would still produce a wrong answer.
+3. Why is pasting the actual error message better prompting practice than summarizing it in your own words?
+
 ### Topics
 - Where AI coding assistants help vs. where they fail silently
 - Verifying AI-generated statistics and code
@@ -61,9 +69,10 @@ Deliverable: a notebook containing an AI assistant's original response, your ver
 2. **Verify a test choice.** Ask an AI assistant to test whether the average `Fare` paid by survivors differs from non-survivors, and to choose and run the appropriate statistical test. Paste its response. Then, using what you learned in [Hypothesis Testing](HypothesisTesting.md), state whether it picked the right test (Z-test vs. T-test) and why, and re-run the test yourself to confirm the conclusion.
 3. Write down 2 prompting mistakes you made or noticed during this exercise (e.g. a prompt that was too vague, or an answer you almost trusted without checking) and what you'd do differently
 
-### Rubric
-| Criteria | Meets expectations |
-|---|---|
-| Verification | Both AI claims independently checked with your own pandas/scipy code, not just re-asked |
-| Correctness judgment | Correctly identifies whether the AI's statistic and test choice were right or wrong |
-| Reflection | 2 concrete, specific prompting lessons — not generic statements |
+### Self-Check
+- [ ] Ground truth for task 1: **54.0%** of passengers under 18 survived (n=113) — does the AI's number match? If not, did you correctly identify what it got wrong?
+- [ ] Task 2 is an **independent two-sample t-test** (`scipy.stats.ttest_ind`, comparing two separate groups), not a one-sample test — did the AI get the test *type* right, not just the Z-vs-T choice?
+- [ ] Ground truth for task 2: the fare difference between survivors and non-survivors is highly statistically significant (p is extremely small, far below 0.05) — survivors paid noticeably higher fares on average
+- [ ] Both verifications used my own independently-written pandas/scipy code — not just re-asking the assistant to check itself
+- [ ] My 2 reflection points are specific to what actually happened in this exercise, not generic advice like "always double-check AI answers"
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/AI_AssistedAnalysis.md))

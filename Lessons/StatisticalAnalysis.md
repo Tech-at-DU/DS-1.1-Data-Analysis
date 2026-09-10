@@ -142,6 +142,14 @@ print(pearson_corr(df['SepalLengthCm'], df['PetalLengthCm']))
 print(scipy.stats.pearsonr(df['SepalLengthCm'], df['PetalLengthCm']))
 ```
 
+## Check Your Understanding
+
+Answers: [Solutions/StatisticalAnalysis.md](../Solutions/StatisticalAnalysis.md).
+
+1. Pearson correlation ranges from -1 to +1. What do values near 0, near +1, and near -1 each mean?
+2. What does fitting a GMM give you that a plain histogram doesn't?
+3. `Pclass` is coded 1 (best) to 3 (worst). Why does it matter whether its correlation with `Survived` is positive or negative, not just how large it is?
+
 ## Topics
 - Gaussian Mixture Models (GMM)
 - Kernel Density Estimation (KDE)
@@ -162,10 +170,11 @@ Deliverable: a notebook completing the GMM, KDE, and correlation activities abov
 3. Complete the correlation activity: heatmap of `df.corr()` on the Iris dataset, plus your own `pearson_corr()` function verified against `scipy.stats.pearsonr`
 4. Extension: using the Titanic dataset, compute the correlation between `Fare` and `Survived`, and between `Pclass` and `Survived`. Which relationship is stronger, and does the sign (positive/negative) make sense given what `Pclass` measures?
 
-## Rubric
-| Criteria | Meets expectations |
-|---|---|
-| GMM | Correct number of components fit, parameters printed, new samples generated |
-| KDE | KDE curve plotted and visually matches the histogram shape |
-| Correlation | `pearson_corr()` matches `scipy.stats.pearsonr` to several decimal places |
-| Extension | Titanic correlations computed correctly, with a correct explanation of sign/strength |
+## Self-Check
+- [ ] My GMM has exactly 2 components (`n_components=2`), and its 2 means are roughly near -5 and 2, matching how `x` was generated
+- [ ] My KDE curve visually tracks the shape of the histogram — two bumps, not one
+- [ ] `pearson_corr(SepalLengthCm, PetalLengthCm)` ≈ **0.872**, and matches `scipy.stats.pearsonr` to at least 3 decimal places
+- [ ] `Fare`-`Survived` correlation ≈ **0.257** (positive: higher fare, more likely to survive)
+- [ ] `Pclass`-`Survived` correlation ≈ **-0.339** (negative: since `Pclass` 3 is the *worst* class, negative makes sense — worse class number, lower survival)
+- [ ] I correctly identified `Pclass` as the stronger relationship (larger magnitude, 0.339 > 0.257) and explained why the negative sign is expected, not an error
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/StatisticalAnalysis.md))

@@ -91,6 +91,14 @@ scores_cv = cross_val_score(LogisticRegression(max_iter=1000), X, y, cv=5)
 print(scores_cv.mean(), scores_cv.std())
 ```
 
+### Check Your Understanding
+
+Answers: [Solutions/IntroToMachineLearning.md](../Solutions/IntroToMachineLearning.md).
+
+1. Why might cross-validated mean accuracy differ from a single train/test split's accuracy?
+2. If a random forest scores lower than logistic regression on one dataset, does that mean random forests are worse in general?
+3. Given a confusion matrix `[[TN, FP], [FN, TP]]`, how do you compute precision for the positive class by hand?
+
 ### Topics
 - Regression vs. classification
 - Train/test split, and why it matters
@@ -112,10 +120,11 @@ Deliverable: a notebook with both models trained and evaluated as above, plus th
 3. Run 5-fold cross-validation on the classification model. How does the cross-validated mean accuracy compare to your single train/test split accuracy?
 4. Extension: swap `LogisticRegression` for `RandomForestClassifier` (`from sklearn.ensemble import RandomForestClassifier`) on the diabetes data. Does accuracy improve? Which of the two models would you trust more, and why (consider both performance and interpretability)?
 
-### Rubric
-| Criteria | Meets expectations |
-|---|---|
-| Regression | Model trained correctly, R² and RMSE reported and interpreted in a sentence |
-| Classification | Model trained correctly, accuracy + confusion matrix + classification report all reported |
-| Cross-validation | 5-fold CV run correctly, compared to the single-split result |
-| Extension | Random forest trained and compared to logistic regression with a reasoned judgment, not just a number |
+### Self-Check
+(Using `random_state=42` throughout, as in the lesson — your numbers should match closely if your code follows the same steps.)
+- [ ] Regression: R² ≈ **0.97**, RMSE ≈ **4.35** points
+- [ ] Classification: accuracy ≈ **0.747** (74.7%)
+- [ ] 5-fold CV mean accuracy ≈ **0.772** — notice it's a bit *higher* than the single-split accuracy; that's the point of cross-validation, a single split's number can be a little lucky or unlucky
+- [ ] Random forest accuracy ≈ **0.721** — *lower* than logistic regression here. If you concluded "random forest is a worse model, full stop," revisit question 2
+- [ ] I can compute precision for the positive class from the raw confusion matrix numbers, not just by reading it off `classification_report`
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/IntroToMachineLearning.md))

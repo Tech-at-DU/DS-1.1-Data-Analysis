@@ -106,6 +106,14 @@ melted = pd.melt(df, id_vars=["weekday"],
 melted                         
 ```
 
+### Check Your Understanding
+
+Answers: [Solutions/HowtoCombineDataFrames.md](../Solutions/HowtoCombineDataFrames.md).
+
+1. Two DataFrames share a column name, but you only want `pd.merge()` to match on `student_id`. What argument do you pass?
+2. What's the difference between `pd.concat([df1, df2])` and `pd.concat([df1, df2], axis=1)`?
+3. When would you reach for `pd.melt()` instead of `merge()` or `concat()`?
+
 ### Topics
 - `pd.merge()`: left, right, inner, outer joins
 - `pd.concat()`: row-wise and column-wise
@@ -130,9 +138,8 @@ grades = pd.DataFrame({'student_id': [1, 2, 2, 5], 'course': ['Math', 'Math', 'A
 2. Concatenate two copies of `students` row-wise with `pd.concat`, using `ignore_index=True` so indices don't collide
 3. Using the `weekday`/`Person 1-3` melt example from this lesson, melt it and then answer: which person had the highest single-day score, and on which day?
 
-### Rubric
-| Criteria | Meets expectations |
-|---|---|
-| Joins | All 4 join types performed correctly with correct resulting row counts |
-| Explanation | Row-count differences explained correctly for each join type |
-| Melt | Melted DataFrame correctly answers the highest-score question |
+### Self-Check
+- [ ] My row counts are: **left = 5, right = 4, inner = 3, outer = 6** — if yours differ, recheck which `student_id`s match
+- [ ] I can explain in one sentence why `inner` has the fewest rows (only fully-matching ids survive) and `outer` has the most (nothing is dropped)
+- [ ] My melted DataFrame correctly identifies **Person 3 on Sunday** as the highest single-day score (15)
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/HowtoCombineDataFrames.md))

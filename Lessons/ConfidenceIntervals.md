@@ -125,6 +125,14 @@ plt.boxplot(x)
 plt.show()
 ```
 
+## Check Your Understanding
+
+Answers: [Solutions/ConfidenceIntervals.md](../Solutions/ConfidenceIntervals.md).
+
+1. `ci_z` and `ci_t` on the same data usually give different intervals. What does each formula assume about the spread (σ), and where does that difference come from?
+2. Why can the 3-standard-deviation method understate the number of outliers on a right-skewed column, compared to the IQR method?
+3. If your 3-std-dev lower bound for `Fare` comes out negative (e.g. -$116), what does that tell you about whether this method fits the data?
+
 ## Topics
 - Confidence intervals: Z-based and T-based
 - Outlier detection: 3-standard-deviation method (normal data) and IQR method (any distribution)
@@ -141,9 +149,11 @@ Deliverable: a notebook with a 95% confidence interval for a second species, an 
 2. Using `Notebooks/titanic.csv`, run `find_remove_outlier` (3-std-dev method) and `find_remove_outlier_iqr` (IQR method) on the `Fare` column. State how many outliers each method finds and why the counts differ (hint: `Fare` is right-skewed, so the two methods disagree)
 3. Produce a box plot of `Fare` and visually confirm it matches the IQR outliers your function found
 
-## Rubric
-| Criteria | Meets expectations |
-|---|---|
-| Confidence interval | Both `ci_z` and `ci_t` computed correctly for Iris-versicolor, with a stated comparison |
-| Outlier detection | Both methods run correctly on `Fare`, outlier counts compared and explained |
-| Visualization | Box plot matches the outliers reported by the IQR method |
+## Self-Check
+- [ ] Iris-versicolor sepal length mean ≈ **5.94** (n=50)
+- [ ] `ci_z` (using σ=0.3525 like the setosa example) ≈ **[5.84, 6.03]**
+- [ ] `ci_t` (using the sample's own std) ≈ **[5.79, 6.08]** — slightly wider, since it accounts for not knowing the true σ
+- [ ] 3-std-dev method finds **20** outliers in `Fare`; IQR finds **116** — a big gap, and that's expected, not a bug
+- [ ] My 3-std-dev lower bound for `Fare` is negative (around -$117) — I can explain why that's a red flag for this method on skewed data
+- [ ] My box plot's visible outlier points roughly match the count my IQR function found
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/ConfidenceIntervals.md))

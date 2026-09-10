@@ -153,6 +153,14 @@ d = DataFrame(table)
 p = d.pivot(index='Item', columns='CType', values='USD')
 ```
 
+### Check Your Understanding
+
+Answers: [Solutions/SimpleDataManipulation.md](../Solutions/SimpleDataManipulation.md).
+
+1. On the same DataFrame, `df.loc[:2]` and `df.iloc[:2]` return a different number of rows. Why, and how many rows does each return?
+2. In `.apply(func, axis=0)` vs. `.apply(func, axis=1)`, which one applies `func` to each row, and which to each column?
+3. Does `df.drop(["age"], axis=1)` change the original `df`? How would you make the change stick?
+
 ### Topics
 - Creating a DataFrame from a dictionary
 - Selecting rows/columns: `.loc`, `.iloc`, boolean filtering
@@ -184,10 +192,11 @@ people = pd.DataFrame({
 5. Which rows have a name starting with a vowel?
 6. Add a new column `pet_to_child_ratio` = `num_pets / (num_children + 1)` (the `+1` avoids dividing by zero)
 
-### Rubric
-| Criteria | Meets expectations |
-|---|---|
-| Selection | Questions 1, 2, 5 use `.loc`/boolean filtering, not manual loops |
-| Aggregation | Question 3 uses `.mean()` |
-| Sorting | Question 4 uses `.sort_values()` |
-| New column | Question 6's column computed with vectorized pandas operations |
+### Self-Check
+- [ ] Question 1 ("older than 30") returns exactly 3 people: mary, bill, lisa
+- [ ] Question 2 ("more pets than children") returns exactly 2 people: mary, jeff
+- [ ] Question 3's average age is `36.666...` and average pets is `1.5`
+- [ ] Question 4 uses `.sort_values(..., ascending=False)`, not a manual loop
+- [ ] Question 5 ("name starts with a vowel") returns an **empty** result — none of john/mary/peter/jeff/bill/lisa start with a/e/i/o/u. If you got rows back, check your condition
+- [ ] Question 6's `pet_to_child_ratio` column is computed with vectorized pandas math (`df['num_pets'] / (df['num_children'] + 1)`), not a Python loop
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/SimpleDataManipulation.md))

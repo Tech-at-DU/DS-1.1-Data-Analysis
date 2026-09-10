@@ -57,6 +57,14 @@ These show up whenever a probability question involves picking a subset — e.g.
 - [Seeing Theory (Brown University): sampling distributions, interactive](https://seeing-theory.brown.edu/probability-distributions/index.html#section3)
 - [Math is Fun: Combinations and Permutations](https://www.mathsisfun.com/combinatorics/combinations-permutations.html)
 
+### Check Your Understanding
+
+Answers: [Solutions/StatisticalDistributions.md](../Solutions/StatisticalDistributions.md).
+
+1. What's the deciding factor between using a permutation formula vs. a combination formula for a counting problem?
+2. Of `Fare`, `Age`, and `SibSp` in the Titanic dataset, which would you predict is the most skewed, and why?
+3. Why does the sample-means function need to draw *random* samples, rather than always taking the first N rows?
+
 ### Challenges
 
 Deliverable: a notebook with a stats summary table, 3 annotated histograms, a working sampling function, and 5 solved counting problems.
@@ -72,10 +80,12 @@ Deliverable: a notebook with a stats summary table, 3 annotated histograms, a wo
    - A race has 8 runners. How many possible orderings are there for 1st, 2nd, and 3rd place?
 5. Complete [this notebook on Measures of Center and Spread](../Notebooks/StatisticalDistributions.ipynb)
 
-### Rubric
-| Criteria | Meets expectations |
-|---|---|
-| Summary stats | Correct mean/median/mode/variance/std for all 3 columns |
-| Skew | Each histogram has a correct skew judgment with reasoning |
-| Sampling function | Produces an approximately normal histogram of sample means |
-| Counting problems | All 5 solved correctly, with permutation vs. combination chosen correctly for each |
+### Self-Check
+- [ ] `Fare`: mean ≈ **$32.20**, median ≈ **$14.45**, std ≈ **$49.67** (note the std is *larger* than the mean — a strong right-skew signal)
+- [ ] `Age`: mean ≈ **29.7**, median ≈ **28.0**, std ≈ **14.5**
+- [ ] `SibSp`: mean ≈ **0.52**, median ≈ **0**, std ≈ **1.1**
+- [ ] I correctly called `Fare` the most skewed of the three, with a reason (its std exceeds its mean; a small number of expensive tickets pull it right)
+- [ ] My sampling-means histogram looks roughly bell-shaped, regardless of which column I sampled from
+- [ ] Counting answers: (1) **11,880** — (2) **455** — (3) **5,040** — (4) **2,598,960** — (5) **336**
+- [ ] For each counting problem I can say in one sentence whether order mattered and why that determined perm vs. comb
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/StatisticalDistributions.md))

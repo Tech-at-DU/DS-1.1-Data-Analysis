@@ -246,6 +246,14 @@ from scipy.stats import norm
 norm.sf(70, loc=60, scale=10)
 ```
 
+### Check Your Understanding
+
+Answers: [Solutions/AppliedProbabilitytodataframe.md](../Solutions/AppliedProbabilitytodataframe.md).
+
+1. What's the difference between `P(Survived=1 and Sex='female')` (joint) and `P(Survived=1 | Sex='female')` (conditional)?
+2. To get "the probability a value is *above* x" from `scipy.stats.norm`, would you use `.cdf(x)` or `.sf(x)`? Why?
+3. Under the empirical rule, what percentage of data falls within 2 standard deviations of the mean?
+
 ### Topics
 - Probability and conditional probability on a DataFrame
 - Histogram, PDF, CDF
@@ -266,10 +274,10 @@ Deliverable: a notebook answering all 5 Titanic questions below plus the tennis-
 5. A class's final exam scores are normally distributed with mean 60 and standard deviation 10. What's the probability a student scored above 70? Verify your `scipy.stats.norm` answer against a histogram of 100,000 simulated scores.
 6. Using `Notebooks/Datasets/tennis.txt` and the `conditional_prob()` function from this lesson, what's the probability of playing tennis (`Decision`) given `Wind == 'Weak'` vs. `Wind == 'Strong'`? Which wind condition is more favorable to playing?
 
-### Rubric
-| Criteria | Meets expectations |
-|---|---|
-| Titanic questions | Questions 1-3 answered with correct conditional probability code |
-| CDF question | Question 4 correctly reads two CDF values and subtracts them |
-| Normal distribution | Question 5's `scipy.stats` answer matches the simulated histogram's proportion |
-| Tennis dataset | Question 6 correctly compares the two conditional probabilities |
+### Self-Check
+- [ ] Q1 (1st class given age 20-30): **~16.6%**
+- [ ] Q2 (survived given female, not "Mrs"): **~70.8%**
+- [ ] Q3 (paid <$25 given male, >30, didn't survive): **~60.9%**
+- [ ] Q5 (`norm.sf(70, loc=60, scale=10)`): **~0.1587** — and your simulated-histogram proportion should land close to that (it's random, so exact match isn't expected, but it should be in the same ballpark, roughly 15-16%)
+- [ ] Q6: **P(Yes | Weak) = 0.75**, **P(Yes | Strong) = 0.5** — weak wind is more favorable to playing
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/AppliedProbabilitytodataframe.md))

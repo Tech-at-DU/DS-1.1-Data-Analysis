@@ -44,6 +44,14 @@ df[df['Age'] > 30]         # boolean filtering: rows matching a condition
 
 Use `.loc` when you know column *names*, `.iloc` when you're working by position, and boolean filtering (`df[condition]`) whenever the slice depends on a value rather than a fixed position.
 
+### Check Your Understanding
+
+Answers: [Solutions/DataScienceProcess.md](../Solutions/DataScienceProcess.md).
+
+1. Which stage of the data science process does "handling missing values" belong to?
+2. When would you reach for `.loc` instead of `.iloc`?
+3. Name 2 questions you should ask about a dataset to check for bias before analyzing it.
+
 ### Topics
 - The data science process, end to end
 - Environment setup: conda, Jupyter
@@ -72,9 +80,9 @@ Deliverable: a notebook that imports the course environment successfully, loads 
    - Select the `Age` and `Survived` columns for rows 50-60 using `.loc`
    - Select all female passengers who did **not** survive
 
-### Rubric
-| Criteria | Meets expectations |
-|---|---|
-| Setup | Environment imports without error, versions printed |
-| Slicing | All 5 slicing tasks produce correct, non-empty results |
-| Method choice | `.loc`/`.iloc`/boolean filtering used appropriately for each task (not just one method for everything) |
+### Self-Check
+- [ ] My environment imports without error and prints version numbers for pandas, numpy, matplotlib
+- [ ] All 5 slicing tasks produce non-empty, correct-looking results (spot-check row counts against what you'd expect)
+- [ ] I used `.loc`, `.iloc`, *and* boolean filtering somewhere in the 5 tasks — not the same one method for everything
+- [ ] The "female passengers who did not survive" filter combines two conditions with `&`, not two separate filters
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/DataScienceProcess.md))

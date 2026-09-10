@@ -126,6 +126,14 @@ $\beta$ = P(accepting $H_o$ $|$ $H_o$ is false)
 The drug has effect on brain
 The drug has no effect on brain
 
+## Check Your Understanding
+
+Answers: [Solutions/HypothesisTesting.md](../Solutions/HypothesisTesting.md).
+
+1. In the rat drug example, is this a one-tail or two-tail test? Why?
+2. Which type of error is "crying wolf" (claiming an effect that isn't really there), and which is "missing a real effect"?
+3. For the `student_scores.csv` challenge (25 rows, population σ unknown), why is a t-test the right choice over a z-test?
+
 ## Resources
 - Read this blog from iaingallagher [Z and T test in Python](http://iaingallagher.tumblr.com/post/50980987285/t-tests-in-python) — including the Unpaired t-test section
 - Read Jeff Groff's [article on null hypothesis on Kaggle](https://www.kaggle.com/jgroff/unit-3-hypothesis-testing)
@@ -142,9 +150,10 @@ Deliverable: a notebook containing the 3 functions from this lesson (`accept_or_
    - Give one example from your own experience (school, work, a claim you've seen in the news) where you could apply a hypothesis test
 3. **Apply it** — using `Datasets/student_scores.csv`, test the claim "the average test score is 65" against the actual sample of scores. State your null and alternative hypotheses, choose z-test or t-test (and justify the choice), compute the p-value, and state your conclusion at α = 0.05
 
-### Rubric
-| Criteria | Meets expectations |
-|---|---|
-| Functions | All 3 functions implemented and correctly accept/reject on the worked examples |
-| Reflection | All 3 reading-reflection questions answered in the student's own words |
-| Applied test | Correct test chosen and justified, correct conclusion at α = 0.05 |
+### Self-Check
+- [ ] Rat example: z = **-3.0**, p ≈ **0.0027** → reject the null at α = 0.01 (the drug has an effect)
+- [ ] British men example: t ≈ **2.30**, p ≈ **0.047** → reject the null at α = 0.05, but only barely — if your α were 0.01 instead, you would *not* reject
+- [ ] `student_scores.csv`: n = **25**, mean ≈ **51.48**, t ≈ **-2.67**, p ≈ **0.013** → reject the null at α = 0.05 (the average score is significantly different from, and lower than, 65)
+- [ ] I used a **t-test** for the student scores data, and can justify why (small sample, unknown population σ)
+- [ ] All 3 reading-reflection answers are in my own words, not copy-pasted from the articles
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/HypothesisTesting.md))

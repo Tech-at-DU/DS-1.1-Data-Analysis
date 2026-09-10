@@ -35,6 +35,14 @@ This course uses a standard Python data science stack, all included in [`binder/
 - **APIs** — programmatically requesting data from a service (see the APIs lesson)
 - **Web scraping** — extracting data from web pages when no API exists (respect the site's terms of service and `robots.txt`)
 
+### Check Your Understanding
+
+Answer these before moving on. Answers: [Solutions/IntroductiontoDataScience.md](../Solutions/IntroductiontoDataScience.md).
+
+1. Name the 3 overlapping parts of EDA listed above.
+2. In this lesson's definitions, how does "data analysis" differ from "data science"?
+3. Name 2 sources of data besides a static CSV file.
+
 ### Topics
 - What is data science / data analysis / EDA
 - The Python data science stack
@@ -55,9 +63,8 @@ Deliverable: a notebook answering the question below two ways, plus 2 more quest
 2. Write 2 more EDA questions about the Titanic dataset and answer each with pandas — one should require a visualization to answer clearly
 3. Work through the [companion notebook](../Notebooks/Data_Analysis_Intro.ipynb) for more worked examples
 
-### Rubric
-| Criteria | Meets expectations |
-|---|---|
-| Both approaches | csv-module and pandas approaches both implemented and agree on the answer |
-| Own questions | 2 additional questions answered, at least one with a chart |
-| Clarity | Each answer states the result in a plain-language sentence, not just raw output |
+### Self-Check
+- [ ] Both approaches (plain `csv` module and pandas) give the **same** count of surviving female passengers — if they don't, one of them has a bug
+- [ ] I wrote 2 more EDA questions, and at least one is answered with a chart, not just a number
+- [ ] Every answer is stated as a plain-language sentence ("X% of..."), not just raw code output
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/IntroductiontoDataScience.md))

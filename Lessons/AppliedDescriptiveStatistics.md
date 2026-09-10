@@ -212,6 +212,14 @@ def compute_standard_deviation(dataset):
 compute_standard_deviation(data)
 ```
 
+### Check Your Understanding
+
+Answers: [Solutions/AppliedDescriptiveStatistics.md](../Solutions/AppliedDescriptiveStatistics.md).
+
+1. For the `data` array used throughout this lesson, the mean (~4.39) is higher than the median (4). What does that tell you about the shape of the distribution?
+2. What's the difference between population standard deviation and sample standard deviation? Which does `np.std()` use by default?
+3. If you split a dataset at its median, you'd expect ~50% of values at or below it. Why might you get slightly more or less than exactly 50% in practice?
+
 ### Topics
 - Mean, median, mode from scratch
 - Range and standard deviation from scratch
@@ -231,9 +239,10 @@ Deliverable: a notebook with all 5 functions from this lesson completed (no `ret
    - What percentage of passengers paid less than the median fare?
    - At what fare amount did 75% of passengers pay less than? (75th percentile)
 
-### Rubric
-| Criteria | Meets expectations |
-|---|---|
-| From-scratch functions | All 5 implemented without calling `np.mean`/`np.median`/etc. inside them |
-| Verification | Each function's output matches the library equivalent |
-| Titanic application | All 3 fare questions answered correctly |
+### Self-Check
+- [ ] On the lesson's `data` array: `compute_mean` ≈ **4.39**, `compute_median` = **4**, `compute_mode` = **3**, `compute_range` = **10**, `compute_standard_deviation` ≈ **3.07**
+- [ ] None of my 5 functions call `np.mean`/`np.median`/`stats.mode`/etc. *inside* them — those are only used afterward, to verify
+- [ ] Mean Titanic fare ≈ **$32.20**, and about **76%** of passengers paid less than that
+- [ ] Median Titanic fare ≈ **$14.45**, and about **50%** of passengers paid at or below that (not exactly 50% — ties at the median value shift it slightly)
+- [ ] 75th percentile fare ≈ **$31.00**
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/AppliedDescriptiveStatistics.md))

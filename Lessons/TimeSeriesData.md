@@ -127,6 +127,14 @@ returns = march_2017['Close'].pct_change()
 print(returns.sum() * 100)
 ```
 
+## Check Your Understanding
+
+Answers: [Solutions/TimeSeriesData.md](../Solutions/TimeSeriesData.md).
+
+1. The log-return and pct-change methods for March 2017 give close but not identical numbers. Why aren't they exactly equal?
+2. What does the "residual" component from `seasonal_decompose` represent?
+3. Why is a rolling mean called "smoothing"?
+
 ## Topics
 - What is a time series; trend and seasonality
 - Decomposing a time series (`statsmodels.tsa.seasonal_decompose`)
@@ -145,13 +153,13 @@ Deliverable: a notebook with the decomposition plot, the sampling/smoothing plot
 3. Complete the March 2017 rate-of-return activity above
 4. Extension: pick a different month in `AAPL.csv` (check the date range in the file first) and compute its rate of return. Was it a better or worse month than March 2017?
 
-## Rubric
-| Criteria | Meets expectations |
-|---|---|
-| Decomposition | Trend, seasonality, and residual plotted and correctly labeled |
-| Sampling/smoothing | Original, sampled, and smoothed series all plotted together with a legend |
-| Rate of return | March 2017 return computed correctly with both methods, and they roughly agree |
-| Extension | A second month's return computed and compared to March 2017 |
+## Self-Check
+- [ ] My March 2017 return is about **+3.2%** by both methods (log-return ≈ 3.20%, pct-change ≈ 3.22%) — close but not identical is expected
+- [ ] I can explain in one sentence why the two return methods aren't exactly equal
+- [ ] `AAPL.csv` covers **2014-09-29 to 2018-03-29** — my "different month" extension picks a month inside that range
+- [ ] My decomposition plot shows 4 panels: original, trend, seasonal, residual — all labeled
+- [ ] My sampling/smoothing plot shows all 3 series (original, sampled, smoothed) on one chart with a legend
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/TimeSeriesData.md))
 
 ### Bonus
 The [Time Series Challenges notebook](../Notebooks/Challenges_Time%20Series.ipynb) has extra practice: date-based slicing (by year, by month, by custom range), plus a synthetic user-comments dataset (`Datasets/user_comments.csv`) for practicing `.str.contains()` and datetime filtering on a non-financial time series.

@@ -26,7 +26,14 @@ By the end of this course, students will be able to...
 
 ## How This Course Works
 
-This is a self-contained, git-native course. Every lesson lives in [`Lessons/`](Lessons/) as a markdown file with explanations, worked examples, and a **Challenges** section with a concrete deliverable and rubric — read the lesson, then complete its challenges in the matching notebook under [`Notebooks/`](Notebooks/). There are no external slide decks or accounts required beyond what's in [`binder/environment.yml`](binder/environment.yml) — everything is delivered through this repository.
+This course is designed to be worked through **at your own pace**, without needing an instructor present for every step. Every lesson lives in [`Lessons/`](Lessons/) as a markdown file with:
+
+- An explanation and worked examples
+- A short **Check Your Understanding** section — a few concept questions to answer before moving on, with answers in [`Solutions/`](Solutions/) so you can self-check as you go (these aren't the graded work, just a comprehension checkpoint)
+- A **Challenges** section — the actual deliverable, completed in the matching notebook under [`Notebooks/`](Notebooks/)
+- A **Self-Check** checklist — concrete, verifiable items (expected values where the answer is fixed, or process checks where it's open-ended) so you know whether your Challenge work is on track before anyone else looks at it
+
+An instructor reviews finished Challenge notebooks at the end — the Self-Check lists are there so you catch problems yourself, early, rather than finding out much later. There are no external slide decks or accounts required beyond what's in [`binder/environment.yml`](binder/environment.yml) — everything is delivered through this repository.
 
 ## Schedule
 

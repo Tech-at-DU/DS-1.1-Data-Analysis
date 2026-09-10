@@ -21,6 +21,14 @@ z = (x - mean) / std_dev
 
 A Z-score of 0 is exactly average. A Z-score of +2 is two standard deviations above the mean — unusually high. Z-scores let you compare values across different scales/distributions on one common footing, and `scipy.stats.norm.cdf(z)` converts a Z-score into the probability of seeing a value that low or lower (and `.sf(z)` for that high or higher).
 
+### Check Your Understanding
+
+Answers: [Solutions/NormalDistribution.md](../Solutions/NormalDistribution.md).
+
+1. If you increase the sample size from 30 to 300 in the CLT sampling exercise, what happens to the spread of the sampling distribution of the mean?
+2. A Z-score beyond ±3 is usually called "unusual." What does a huge Z-score (like 50+) on a skewed raw column, such as `Global_Sales`, actually tell you?
+3. What does `scipy.stats.norm.cdf(0)` return, and why does that number make sense?
+
 ### Topics
 - Advanced Descriptive Statistics
   - The Standard Normal Distribution
@@ -51,9 +59,10 @@ Deliverable: a notebook demonstrating the CLT on real data plus 3 answered Z-sco
 - Write a custom function to calculate the Z-Score of one or many data points in a distribution
 - Write a custom `.describe()` function returning important descriptive stats in a tabular manner from a non-DataFrame dataset (NP array, Python list)
 
-### Rubric
-| Criteria | Meets expectations |
-|---|---|
-| CLT demo | Both histograms produced; markdown cell states why the sample-means histogram looks normal even though the raw data doesn't |
-| Z-score questions | All 3 answered with correct code and a stated numeric result |
-| Sampling function | Works for any sample size/column passed in, not hardcoded to one run |
+### Self-Check
+- [ ] `Global_Sales` mean ≈ **0.54**, standard deviation ≈ **1.56** (population, i.e. `ddof=0`)
+- [ ] The best-selling game's Z-score is huge — around **53** — because `Global_Sales` is extremely right-skewed, not because your code is wrong
+- [ ] `norm.cdf(1.5)` ≈ **0.933**, `norm.sf(2.0)` ≈ **0.0228** — these are fixed values for any Z-score of 1.5/2.0, independent of the dataset
+- [ ] My 1,000-sample-means histogram looks roughly bell-shaped and centered near 0.54, even though the raw `Global_Sales` histogram doesn't
+- [ ] My sampling function takes sample size and column as arguments — I tested it with a different sample size (not just 30) and it still worked
+- [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/NormalDistribution.md))
