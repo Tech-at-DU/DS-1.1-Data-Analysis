@@ -53,7 +53,7 @@ Deliverable: a notebook demonstrating the CLT on real data plus 3 answered Z-sco
    - What is the Z-score of the best-selling game in the dataset?
    - Using `scipy.stats.norm.cdf`, what proportion of games would you expect to sell less than a game with Z-score 1.5?
    - Using `scipy.stats.norm.sf`, what proportion of games would you expect to sell more than a game with Z-score 2.0?
-3. Complete [this notebook on CLT and distributions](../Notebooks/NormalDistribution.ipynb)
+3. Complete [this notebook on CLT and distributions](../Notebooks/11-NormalDistribution.ipynb)
 
 ### Stretch Challenges
 - Write a custom function to calculate the Z-Score of one or many data points in a distribution

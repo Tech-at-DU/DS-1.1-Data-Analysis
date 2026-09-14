@@ -109,7 +109,7 @@ Answers: [Solutions/IntroToMachineLearning.md](../Solutions/IntroToMachineLearni
 ### Resources
 - [scikit-learn: Getting Started](https://scikit-learn.org/stable/getting_started.html)
 - [scikit-learn: Model evaluation](https://scikit-learn.org/stable/modules/model_evaluation.html)
-- Complete the [companion notebook](../Notebooks/IntroToMachineLearning.ipynb)
+- Complete the [companion notebook](../Notebooks/20-IntroToMachineLearning.ipynb)
 
 ### Challenges
 

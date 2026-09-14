@@ -59,7 +59,7 @@ Answers: [Solutions/AI_AssistedAnalysis.md](../Solutions/AI_AssistedAnalysis.md)
 
 ### Resources
 - [Anthropic: Claude Code documentation](https://docs.claude.com/en/docs/claude-code/overview)
-- Complete the [companion notebook](../Notebooks/AI_AssistedAnalysis.ipynb)
+- Complete the [companion notebook](../Notebooks/19-AI_AssistedAnalysis.ipynb)
 
 ### Challenges
 

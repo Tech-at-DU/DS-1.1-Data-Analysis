@@ -1,6 +1,6 @@
 # Hypothesis Testing & Acceptable Error
 
-## [Slides](../Notebooks/HypothesisTesting.ipynb)
+## [Slides](../Notebooks/15-HypothesisTesting.ipynb)
 
 ## Learning Objectives (Competencies)
 By the end of this lesson, students will be able to:

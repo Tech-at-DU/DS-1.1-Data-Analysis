@@ -48,7 +48,7 @@ Answers: [Solutions/DataVisualization.md](../Solutions/DataVisualization.md).
 
 Deliverable: a notebook with 4 written questions, the pandas code that answers each using slicing/indexing, and one chart per question (4 charts total, at least one of each type: scatterplot, bar/histogram, pie).
 
-1. Complete [this notebook](../Notebooks/DataVisualization.ipynb) on basic data visualization with seaborn on the _Titanic_ data
+1. Complete [this notebook](../Notebooks/06-DataVisualization.ipynb) on basic data visualization with seaborn on the _Titanic_ data
 2. Write 4 descriptive analysis questions about the Titanic dataset. Answer each with pandas (slicing/indexing) and then chart it:
    - 1 question suited to a **scatterplot** (relationship between two continuous variables)
    - 1 question suited to a **bar graph or histogram** (distribution or comparison across categories/bins)

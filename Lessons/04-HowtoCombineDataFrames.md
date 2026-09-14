@@ -123,7 +123,7 @@ Answers: [Solutions/HowtoCombineDataFrames.md](../Solutions/HowtoCombineDataFram
 - [Pandas Merge, Join, and Concatenate](https://martin-thoma.com/pandas-merge-join-concatenate/)
 - [Pandas melt tutorial notebook](https://github.com/codebasics/py/blob/master/pandas/11_melt/pandas_melt_tutorial.ipynb)
 - [Reshape Pandas Data with Melt](https://deparkes.co.uk/2016/10/28/reshape-pandas-data-with-melt/)
-- Complete the [companion notebook](../Notebooks/Pandas_Merge_Concatenate.ipynb)
+- Complete the [companion notebook](../Notebooks/04-Pandas_Merge_Concatenate.ipynb)
 
 ### Challenges
 

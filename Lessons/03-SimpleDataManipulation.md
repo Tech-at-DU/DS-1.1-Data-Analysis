@@ -169,7 +169,7 @@ Answers: [Solutions/SimpleDataManipulation.md](../Solutions/SimpleDataManipulati
 
 ### Resources
 - [pandas: Indexing and selecting data](https://pandas.pydata.org/docs/user_guide/indexing.html)
-- Complete the [companion notebook](../Notebooks/Pandas_Intro.ipynb)
+- Complete the [companion notebook](../Notebooks/03-Pandas_Intro.ipynb)
 
 ### Challenges
 

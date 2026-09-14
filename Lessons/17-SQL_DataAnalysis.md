@@ -74,7 +74,7 @@ Answers: [Solutions/SQL_DataAnalysis.md](../Solutions/SQL_DataAnalysis.md).
 ### Resources
 - [DuckDB: SQL Introduction](https://duckdb.org/docs/sql/introduction)
 - [W3Schools: SQL Tutorial](https://www.w3schools.com/sql/) — good reference for syntax
-- Complete the [companion notebook](../Notebooks/SQL_DataAnalysis.ipynb)
+- Complete the [companion notebook](../Notebooks/17-SQL_DataAnalysis.ipynb)
 
 ### Challenges
 

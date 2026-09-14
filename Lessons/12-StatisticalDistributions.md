@@ -78,7 +78,7 @@ Deliverable: a notebook with a stats summary table, 3 annotated histograms, a wo
    - A password uses 4 distinct digits (0-9). How many possible passwords are there?
    - How many ways can you choose 5 cards from a standard 52-card deck?
    - A race has 8 runners. How many possible orderings are there for 1st, 2nd, and 3rd place?
-5. Complete [this notebook on Measures of Center and Spread](../Notebooks/StatisticalDistributions.ipynb)
+5. Complete [this notebook on Measures of Center and Spread](../Notebooks/12-StatisticalDistributions.ipynb)
 
 ### Self-Check
 - [ ] `Fare`: mean ≈ **$32.20**, median ≈ **$14.45**, std ≈ **$49.67** (note the std is *larger* than the mean — a strong right-skew signal)

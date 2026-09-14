@@ -226,7 +226,7 @@ Answers: [Solutions/AppliedDescriptiveStatistics.md](../Solutions/AppliedDescrip
 - Percentiles
 
 ### Resources
-- Complete the [companion notebook](../Notebooks/Applied_Descriptive_Statistics.ipynb)
+- Complete the [companion notebook](../Notebooks/08-Applied_Descriptive_Statistics.ipynb)
 
 ### Challenges
 

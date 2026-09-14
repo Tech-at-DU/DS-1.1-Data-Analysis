@@ -62,7 +62,7 @@ Deliverable: a notebook where the Titanic dataset ends with 3 new columns and no
 3. **Encode**
    - Apply one-hot encoding to `age_group` and `Embarked` (`pd.get_dummies`)
    - Apply integer encoding to `Sex` (it's binary, so ordering doesn't matter)
-4. Complete this [notebook on data collation and wrangling](../Notebooks/DescriptiveStatistics.ipynb)
+4. Complete this [notebook on data collation and wrangling](../Notebooks/07-DescriptiveStatistics.ipynb)
 
 ### Self-Check
 - [ ] The median `Age` I filled with is **28.0** — if yours differs a lot, double-check you dropped nulls before computing it

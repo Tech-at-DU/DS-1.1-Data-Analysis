@@ -68,7 +68,7 @@ Answers: [Solutions/WorkingWithAPIs.md](../Solutions/WorkingWithAPIs.md).
 - [requests: Quickstart](https://requests.readthedocs.io/en/latest/user/quickstart/)
 - [pandas: `json_normalize`](https://pandas.pydata.org/docs/reference/api/pandas.json_normalize.html)
 - [Public APIs (no key required) — a curated list](https://github.com/public-apis/public-apis)
-- Complete the [companion notebook](../Notebooks/WorkingWithAPIs.ipynb)
+- Complete the [companion notebook](../Notebooks/18-WorkingWithAPIs.ipynb)
 
 ### Challenges
 

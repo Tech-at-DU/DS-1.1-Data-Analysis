@@ -160,6 +160,7 @@ Answers: [Solutions/StatisticalAnalysis.md](../Solutions/StatisticalAnalysis.md)
 - Read this blog [KDE](https://jakevdp.github.io/blog/2013/12/01/kernel-density-estimation/)
 - [scikit-learn: KDE for generating handwritten digits](http://scikit-learn.org/stable/auto_examples/neighbors/plot_digits_kde_sampling.html)
 - [Pearson correlation coefficient (Wikipedia)](https://en.wikipedia.org/wiki/Pearson_correlation_coefficient)
+- Complete the [companion notebook](../Notebooks/14-StatisticalAnalysis.ipynb)
 
 ## Challenges
 

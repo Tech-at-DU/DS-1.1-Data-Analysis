@@ -140,6 +140,7 @@ Answers: [Solutions/ConfidenceIntervals.md](../Solutions/ConfidenceIntervals.md)
 
 ## Resources
 - Read this assignment from CS department of Utah [Estimation and Confidence Intervals](https://www.cs.utah.edu/~jeffp/teaching/cs3130/homeworks/hw7.pdf)
+- Complete the [companion notebook](../Notebooks/13-ConfidenceIntervals.ipynb)
 
 ## Challenges
 

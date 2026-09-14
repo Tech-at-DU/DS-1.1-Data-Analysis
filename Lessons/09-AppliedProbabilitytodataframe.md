@@ -261,7 +261,7 @@ Answers: [Solutions/AppliedProbabilitytodataframe.md](../Solutions/AppliedProbab
 - `scipy.stats.norm`: `cdf`, `sf`
 
 ### Resources
-- Complete the [companion notebook](../Notebooks/Applied_Probability.ipynb)
+- Complete the [companion notebook](../Notebooks/09-Applied_Probability.ipynb)
 
 ### Challenges
 

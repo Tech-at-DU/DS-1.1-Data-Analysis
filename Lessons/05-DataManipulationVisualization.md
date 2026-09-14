@@ -191,7 +191,7 @@ Answers: [Solutions/DataManipulationVisualization.md](../Solutions/DataManipulat
 ### Resources
 - [pandas: Group by: split-apply-combine](https://pandas.pydata.org/docs/user_guide/groupby.html)
 - [pandas: `crosstab`](https://pandas.pydata.org/docs/reference/api/pandas.crosstab.html)
-- Complete the [companion notebook](../Notebooks/Pandas_Titanic.ipynb)
+- Complete the [companion notebook](../Notebooks/05-Pandas_Titanic.ipynb)
 
 ### Challenges
 

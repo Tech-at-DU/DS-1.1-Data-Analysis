@@ -73,7 +73,7 @@ Deliverable: a notebook containing your `probability()` and `conditional_prob()`
    - What is the probability a passenger was both female and survived? (joint)
    - Given a passenger embarked at Southampton, what is the probability they were in 3rd class? (conditional)
    - Given a passenger was under 18, what is the probability they survived? (conditional)
-3. Complete the [notebook on basic and conditional probability](../Notebooks/ConditionalProbability.ipynb)
+3. Complete the [notebook on basic and conditional probability](../Notebooks/10-ConditionalProbability.ipynb)
 
 ### Stretch Challenges
 - Create one visualization (bar chart) per conditional-probability question comparing the conditional probability against the unconditional baseline
