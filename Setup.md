@@ -27,13 +27,21 @@ conda activate ds-1.1-data-analysis
 
 This installs everything used across every lesson in this course — pandas, numpy, scipy, statsmodels, matplotlib, seaborn, plotly, scikit-learn, duckdb, and requests.
 
+**`conda activate ds-1.1-data-analysis` only lasts for your current terminal session.** Every time you close and reopen your terminal, run it again before doing anything else. If your prompt says `(base)` instead of `(ds-1.1-data-analysis)`, you haven't activated it yet — commands like `jupyter` won't be found until you do.
+
 ### 3. Work through a lesson
 
 **Work inside your cloned copy of this repo — don't copy individual notebooks or datasets out to another folder.** Notebooks load data and images with relative paths (e.g. `Datasets/titanic.csv`, `Images/DS_process.png`) that only resolve correctly from inside this repo's folder structure. Copy a notebook out on its own and those paths — and any embedded images — break.
 
 1. Read the lesson in [`Lessons/`](Lessons/)
-2. Open its companion notebook in [`Notebooks/`](Notebooks/) **in place** and complete the **Challenges** section from the lesson
-3. Commit your work as you go:
+2. Open its companion notebook **in place**, from inside the `Notebooks/` folder:
+   ```
+   conda activate ds-1.1-data-analysis
+   cd Notebooks
+   jupyter notebook 01-Data_Analysis_Intro.ipynb
+   ```
+   (swap in the actual filename for the lesson you're on — see [DELIVERABLES.md](DELIVERABLES.md) for the full list)
+3. Complete the **Challenges** section from the lesson, then commit your work as you go:
 
 ```
 git add Notebooks/<the-notebook-you-edited>.ipynb
