@@ -57,13 +57,13 @@ Answer these before moving on. Answers: [Solutions/IntroductiontoDataScience.md]
 
 ### Challenges
 
-Deliverable: a notebook answering the question below two ways, plus 2 more questions of your own.
+Deliverable: everything below goes in **one file** — [`Notebooks/01-Data_Analysis_Intro.ipynb`](../Notebooks/01-Data_Analysis_Intro.ipynb). Open it and work in it directly; don't create a separate notebook.
 
-1. Using `Notebooks/titanic.csv`, answer **"how many female passengers survived?"** twice:
+1. Run through the notebook top to bottom. It already demonstrates answering **"how many female passengers survived?"** two ways using `titanic.csv`:
    - Once using only Python's built-in `csv` module (no pandas) — practice working with plain rows/lists
    - Once using pandas (`pd.read_csv` + boolean filtering) — confirm both give the same answer
-2. Write 2 more EDA questions about the Titanic dataset and answer each with pandas — one should require a visualization to answer clearly
-3. Work through the [companion notebook](../Notebooks/01-Data_Analysis_Intro.ipynb) for more worked examples
+2. At the end of the notebook, add new cells: write 2 more EDA questions about the Titanic dataset and answer each with pandas — one should require a visualization to answer clearly
+3. Save and commit the notebook
 
 ### Self-Check
 - [ ] Both approaches (plain `csv` module and pandas) give the **same** count of surviving female passengers — if they don't, one of them has a bug
