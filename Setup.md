@@ -13,6 +13,13 @@ cd DS-1.1-Data-Analysis
 
 ### 2. Set up your environment
 
+This step needs `conda` — if `conda env create` says `command not found`, you don't have it installed yet. `conda` is the environment manager program itself (Miniconda/Anaconda), not a Python package, so `pip install` won't get it. Install it first:
+
+- **macOS with Homebrew**: `brew install miniconda`, then `conda init zsh` (or `bash` if that's your shell), then close and reopen your terminal
+- **No Homebrew, or Windows/Linux**: download and run the installer from [docs.conda.io/en/latest/miniconda.html](https://docs.conda.io/en/latest/miniconda.html), then close and reopen your terminal
+
+Once `conda --version` works in a new terminal:
+
 ```
 conda env create -f binder/environment.yml
 conda activate ds-1.1-data-analysis
@@ -43,9 +50,13 @@ git push origin master
 
 ### 5. Pulling in course updates
 
-If the upstream course repo gets updated, add it as a second remote and pull from it:
+The course repo (`Tech-at-DU/DS-1.1-Data-Analysis`) may get updated after you've forked it. To pull those updates into your fork, add it as a second remote (the conventional name is `upstream`) and merge from it:
 
 ```
-git remote add upstream https://github.com/<course-org>/DS-1.1-Data-Analysis.git
-git pull upstream master
+git remote add upstream https://github.com/Tech-at-DU/DS-1.1-Data-Analysis.git
+git fetch upstream
+git merge upstream/master
+git push origin master
 ```
+
+If you haven't started any of your own work yet, `git pull upstream master` is equivalent and simpler. Once you've committed your own notebook edits, prefer `fetch` + `merge` (or GitHub's "Sync fork" button on your fork's page) so you can review what's incoming before it lands on top of your work.
