@@ -61,6 +61,8 @@ Answers: [Solutions/Linear_Regression_Tutorial.md](../Solutions/Linear_Regressio
 
 ## Task
 
+Create a new notebook at `Notebooks/CA_LinearRegressionTutorial.ipynb`.
+
 1. Run the multiple regression example above
 2. Print and sort the coefficients — which feature has the largest effect on petrol consumption, in its original (unscaled) units?
 3. Standardize the 4 features with `StandardScaler` (fit on training data only), refit the model, and re-sort the coefficients — which feature actually has the biggest standardized effect, and does the picture change compared to the raw coefficients?

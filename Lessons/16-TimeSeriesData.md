@@ -146,7 +146,7 @@ Answers: [Solutions/TimeSeriesData.md](../Solutions/TimeSeriesData.md).
 
 ## Challenges
 
-Deliverable: a notebook with the decomposition plot, the sampling/smoothing plot, and the March 2017 return calculation from this lesson, plus the extension below.
+Deliverable: create a new notebook at `Notebooks/16-TimeSeriesData.ipynb` with the decomposition plot, the sampling/smoothing plot, and the March 2017 return calculation from this lesson, plus the extension below.
 
 1. Complete the trend/seasonality decomposition activity on `AirPassengers.csv`
 2. Complete the sampling and smoothing activity on `AAPL.csv`

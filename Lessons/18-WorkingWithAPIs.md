@@ -99,4 +99,4 @@ Weather data changes daily, so there's no fixed number to check your answer agai
 - [ ] "Highest forecasted max" and "average forecasted min" are each a single number, computed with pandas (`.max()`, `.mean()`), not read off the printout by eye
 - [ ] My line chart has both max and min temperature, a legend, and readable date labels
 - [ ] I got all 3 Check Your Understanding questions right (see [Solutions](../Solutions/WorkingWithAPIs.md))
-| Error handling | Stretch: function correctly detects and reports a failed request |
+- [ ] Stretch: my wrapped request function correctly detects and reports a failed request

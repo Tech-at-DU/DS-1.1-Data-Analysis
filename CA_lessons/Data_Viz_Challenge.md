@@ -8,7 +8,7 @@ An open-ended project applying everything from [Data Manipulation & Visualizatio
 
 ## Task
 
-Produce a short visual analysis (5-7 charts) that tells a coherent story about this dataset — not 5-7 unrelated charts, but a narrative with a beginning, middle, and end. Pick a angle and follow it, for example:
+Create a new notebook at `Notebooks/CA_DataVizChallenge.ipynb`. Produce a short visual analysis (5-7 charts) that tells a coherent story about this dataset — not 5-7 unrelated charts, but a narrative with a beginning, middle, and end. Pick a angle and follow it, for example:
 
 - How does content availability differ across the 4 platforms (volume, genre mix, ratings)?
 - Has average IMDb rating for streaming content changed over time (by `Year`)?

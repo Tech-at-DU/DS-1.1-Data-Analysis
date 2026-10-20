@@ -68,7 +68,7 @@ Answers: [Solutions/DataScienceProcess.md](../Solutions/DataScienceProcess.md).
 
 ### Challenges
 
-Deliverable: a notebook that imports the course environment successfully, loads `Notebooks/titanic.csv`, and contains one code cell per slicing task below with its output.
+Deliverable: create a new notebook at `Notebooks/02-DataScienceProcess.ipynb` that imports the course environment successfully, loads `Notebooks/titanic.csv`, and contains one code cell per slicing task below with its output.
 
 1. Environment setup
    - Install the course environment: `conda env create -f binder/environment.yml`

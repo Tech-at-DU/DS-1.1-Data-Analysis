@@ -20,6 +20,15 @@ All of the materials you need to complete the steps are in the lessons. Some goo
 - [Hypothesis Testing & Acceptable Error](../../Lessons/15-HypothesisTesting.md)
 
 
+### Self-Check
+
+- [ ] My loaded dataset has **70,000** rows — if not, check the `sep=';'` argument on `read_csv`
+- [ ] After converting `age` from days to years, the range is about **29.6 to 64.9** years
+- [ ] `cardio` is a balanced target: about **50%** of rows have `cardio == 1`
+- [ ] If using the default null hypothesis (average systolic BP the same with/without cardiovascular disease): mean `ap_hi` is about **137** for `cardio == 1` vs. about **120** for `cardio == 0` — a large, statistically significant difference (p is extremely small), so the null gets rejected
+- [ ] I used an independent two-sample test (comparing two separate groups), not a one-sample test
+- [ ] Every section has a plain-language sentence stating the result, not just code output
+
 ### Evaluation
 
 This project will be evaluated as follows. **You must get an average score of 3 to pass this project:**

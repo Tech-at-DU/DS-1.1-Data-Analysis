@@ -35,11 +35,11 @@ This course is designed to be worked through **at your own pace**, without needi
 - A **Challenges** section — the actual deliverable, completed in the matching notebook under [`Notebooks/`](Notebooks/)
 - A **Self-Check** checklist — concrete, verifiable items (expected values where the answer is fixed, or process checks where it's open-ended) so you know whether your Challenge work is on track before anyone else looks at it
 
-An instructor reviews finished Challenge notebooks at the end — the Self-Check lists are there so you catch problems yourself, early, rather than finding out much later. There are no external slide decks or accounts required beyond what's in [`binder/environment.yml`](binder/environment.yml) — everything is delivered through this repository.
+This course works well as an **independent study with a weekly check-in**: work through lessons at your own pace between meetings, run the Self-Check before each meeting, and bring your mentor the finished notebooks (and anything the Self-Check couldn't resolve) to review together. See [DELIVERABLES.md](DELIVERABLES.md) for a single-page list of every deliverable in the course. There are no external slide decks or accounts required beyond what's in [`binder/environment.yml`](binder/environment.yml) — everything is delivered through this repository.
 
 ## Schedule
 
-20 lessons, roughly one per class session. Each links to its `Lessons/` file.
+20 lessons. There's no fixed pace — go as deep as a topic needs. As a rough guide for a weekly check-in cadence, 2-3 lessons a week covers the course in about 7-10 weeks, but the point is mastery, not the clock.
 
 | # | Topic | Notes |
 |:-:|---|---|
@@ -64,15 +64,19 @@ An instructor reviews finished Challenge notebooks at the end — the Self-Check
 | 19 | [AI-Assisted Data Analysis](Lessons/19-AI_AssistedAnalysis.md) | |
 | 20 | [Intro to Machine Learning](Lessons/20-IntroToMachineLearning.md) | Capstone |
 
-Extra project material lives in [`CA_lessons/`](CA_lessons/) ([Data Visualization Challenge](CA_lessons/Data_Viz_Challenge.md), [Linear Regression Tutorial](CA_lessons/Linear_Regression_Tutorial.md)) and [`Homework/`](Homework/).
-
 ## Setup
 
 See [Setup.md](Setup.md) for forking/cloning this repo and setting up your environment.
 
 ## Assignments
 
-Each lesson's **Challenges** section is its assignment — complete it in the matching notebook and commit/push your work. Larger projects are in [`Homework/`](Homework/) and [`CA_lessons/`](CA_lessons/).
+Each lesson's **Challenges** section is its assignment — complete it in the matching notebook and commit/push your work. The full list, with every deliverable's file path in one place, is in [DELIVERABLES.md](DELIVERABLES.md).
+
+Beyond the 20 lessons:
+- [`Homework/HW1`](Homework/HW1/README.md) — custom histogram function (after lesson 6)
+- [`Homework/HW2`](Homework/HW2/README.md) — cardio hypothesis-testing project (after lesson 15)
+- [`CA_lessons/Data_Viz_Challenge.md`](CA_lessons/Data_Viz_Challenge.md) — open-ended visualization project (after lesson 6)
+- [`CA_lessons/Linear_Regression_Tutorial.md`](CA_lessons/Linear_Regression_Tutorial.md) — multiple linear regression deep-dive (after lesson 20)
 
 ## Data Analysis Technical Interview Topics Covered in This Course
 
